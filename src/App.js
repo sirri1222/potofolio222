@@ -41,16 +41,19 @@ export default function App() {
     setFiltered(projectArr[1]);
   };
   // 프로젝트 클릭
-  const [modalVisible, setModalVisible] = useState(false);
-  const [modalVisible2, setModalVisible2] = useState(false);
-  const [modalVisible3, setModalVisible3] = useState(false);
-  const [modalVisible4, setModalVisible4] = useState(false);
+  const [modalVisible, setModalVisible] = useState(true);
+  const [modalVisible2, setModalVisible2] = useState(true);
+  const [modalVisible3, setModalVisible3] = useState(true);
+  const [modalVisible4, setModalVisible4] = useState(true);
 
   // 한글자씩 나타내기
-  const completionWord = `안녕하세요 프론트엔드 개발자 손현지입니다.`;
-  const [Title, setTitle] = useState("");
+ 
+  const [text1, setText1] = useState("");
+  const [text2, setText2] = useState("");
   const [count, setCount] = useState(0);
 
+  const firstTxt = "안녕하세요 프론트엔드 개발자 ";
+  const secondTxt = "손현지입니다";
   const openHandler = () => {
     setModalVisible(!modalVisible);
   };
@@ -65,25 +68,19 @@ export default function App() {
   };
   useEffect(() => {
     const typingInterval = setInterval(() => {
-      setTitle((prevTitleValue) => {
-        let result = prevTitleValue
-          ? prevTitleValue + completionWord[count]
-          : completionWord[0];
-        setCount(count + 1);
+      if (count < firstTxt.length) {
+        setText1((prevTxt) => prevTxt + firstTxt[count]);
+      } else if (count >= firstTxt.length && count < firstTxt.length + secondTxt.length) {
+        setText2((prevTxt) => prevTxt + secondTxt[count - firstTxt.length]);
+      }
 
-        if (count >= completionWord.length) {
-          setCount(0);
-          setTitle("");
-        }
-
-        return result;
-      });
-    }, 300);
+      setCount((prevCount) => prevCount + 1);
+    }, 120);
 
     return () => {
       clearInterval(typingInterval);
     };
-  });
+  }, [count]);
   return (
     <>
       <Background />
@@ -97,27 +94,22 @@ export default function App() {
         className="mySwiper z-10 "
       >
         <SwiperSlide>
-          <div className="relative text-center z-13 mt-[10%] mb-7">
+          <div className="relative text-center bg-blue-300 z-13 mt-[10%] mb-[520px]">
             <img
               src="/videos/main-9.png"
               className="w-[500px] h-[250px] absolute left-[37%]"
               alt="dd"
             ></img>
-            <p className="text-7xl absolute top-0 left-[38%] text-white mt-10 font-nm w-3/12 h-[150px] rounded-full ">
+            <p className="text-7xl absolute top-0 left-[38%] text-white mb- mt-10 font-nm w-3/12 h-[150px] rounded-full ">
               hyunji
             </p>
           </div>
-          <div className="mt-[20%] text-center">
-            <h2 className="text-5xl text-white font-nm h-16 ">{Title}</h2>
-            <span className="text-7xl text-white font-nm my-3"></span>
+          <div className="mt-[20%] text-center w-[50%] ml-[25%] rounded-xl py-2 bg-blue-300 bg-opacity-50 ">
+            <h2 className="text-5xl  text-white drop-shadow-xl font-nm h-16 my-11 ">{text1}</h2>
+            <h2 className="text-5xl text-white drop-shadow-xl  font-nm h-16 my-11 ">{text2}</h2>
+            {/* <img src="/images/1234.png" className="ml-[20%] mt-[-20%]  w-[1000px]" alt=""></img> */}
           </div>
-          <div className="ml-[32%]">
-            <img
-              className="mt-[-25%]  bg-opacity-50 rounded-[10%] w-[800px]"
-              src="/images/mainp2.png"
-              alt=""
-            ></img>
-          </div>
+          <div className="ml-[32%]"></div>
         </SwiperSlide>
 
         <SwiperSlide>
@@ -145,9 +137,7 @@ export default function App() {
                   <span className="text-[#000000]">손현지</span> 입니다
                 </p>
                 <p className="2xl:p-5 xl:p-5 lg:p-2 leading-1 2xl:opacity-100 xl:opacity-100 2xl:text-sm xl:text-sm lg:text-xs sm:opacity-0 xs:opacity-0">
-                  저는 주로 React를 사용하며, Redux, TypeScript 등의 기술 스택을
-                  활용해 협업 프로젝트에서도 원활한 소통과 개발을 할 수
-                  있습니다.
+                 
                   <br /> 또한 UI 라이브러리인 Ant Design, Material-UI 등을
                   활용하여 보다 쉽게 사용자 인터페이스를 구현해본 경험이 있으며,
                   코드의 가독성, 유지보수성, 성능 등을 고려하여 코드를
@@ -241,8 +231,8 @@ export default function App() {
                     <img src="skill/html.png" alt="html"></img>
 
                     <span className="text-lg leading-loose">HTML</span>
-                    <div className="absolute top-0 left-[-21px] w-[200px] h-full bg-black bg-opacity-70 text-white opacity-0 hover:opacity-100 hover:border-black hover:rounded-3xl">
-                      <h2 className="my-2 text-xl ">html5</h2>{" "}
+                    <div className="absolute top-0 left-[-41px] w-[200px] h-full bg-black bg-opacity-70 text-white opacity-0 hover:opacity-100 hover:border-black hover:rounded-3xl">
+                      <h2 className="my-2 text-xl text-center ">html5</h2>{" "}
                       <p className=" px-3 text-justify">
                         웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
                       </p>
@@ -277,9 +267,9 @@ export default function App() {
                     </span>
                     <span className="text-lg leading-loose">javascript</span>
                     <div className="absolute left-[-40px] top-0 w-[200px] h-full bg-black bg-opacity-70 text-white opacity-0 hover:opacity-100 hover:border-black hover:rounded-3xl">
-                      <h2 className="my-2 text-xl mx-[35%]">js</h2>{" "}
+                      <h2 className="my-2 text-xl mx-[35%]">javascript</h2>{" "}
                       <p className=" px-3 text-justify">
-                        웹사이트에 필요한 동적 기능들을 구현할 수 있습니다.
+                      폼 유효성 검사, 스크롤 이벤트 및 애니메이션 등과 같은 다양한 동적 기능을 구현할 수 있습니다.
                       </p>
                     </div>
                     <div className="mb-6 h-1 w-full bg-neutral-200 dark:bg-neutral-600">
@@ -297,7 +287,7 @@ export default function App() {
                     <div className="absolute left-[-40px] top-0 w-[200px] h-full bg-black bg-opacity-70 text-white opacity-0 hover:opacity-100 hover:border-black hover:rounded-3xl">
                       <h2 className="my-2 text-xl mx-[35%]">typescript</h2>{" "}
                       <p className=" px-3 text-justify">
-                        인터페이스와 제네릭에 대해 이해하고 있습니다.
+                      Interface 를 정의해 코드 재사용성을 높일 수 있으며, 인터페이스와 제네릭에 대해 이해하고 있습니다. 
                       </p>
                     </div>
                     <div className="mb-6 h-1 w-full bg-neutral-200 dark:bg-neutral-600">
@@ -315,9 +305,9 @@ export default function App() {
                       styled-components
                     </span>
                     <div className="absolute left-[-40px] top-0 w-[200px] h-full bg-black bg-opacity-70 text-white opacity-0 hover:opacity-100 hover:border-black hover:rounded-3xl">
-                      <h2 className="my-2 text-xl mx-[35%]">html5</h2>{" "}
+                      <h2 className="my-2 text-xl text-center whitespace-nowrap">styled-components</h2>{" "}
                       <p className=" px-3 text-justify">
-                        웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
+                      styled-components를 사용하여 css 작업을 수행할 수 있습니다.
                       </p>
                     </div>
                     <div className="mb-6 h-1 w-full bg-neutral-200 dark:bg-neutral-600">
@@ -333,9 +323,10 @@ export default function App() {
                     </span>
                     <span className="text-lg leading-loose">react</span>
                     <div className="absolute left-[-40px] top-0 w-[200px] h-full bg-black bg-opacity-70 text-white opacity-0 hover:opacity-100 hover:border-black hover:rounded-3xl">
-                      <h2 className="my-2 text-xl mx-[35%]">html5</h2>{" "}
+                      <h2 className="my-2 text-xl mx-[35%]">react</h2>{" "}
                       <p className=" px-3 text-justify">
-                        웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
+                      useState, useEffect 등과 같은 Hooks 를 활용하여  상태 관리와 렌더링 작업, 라우팅 처리를 할 수 을 보다 간편하게 처리할 수 있습니다.
+                      
                       </p>
                     </div>
                     <div className="mb-6 h-1 w-full bg-neutral-200 dark:bg-neutral-600">
@@ -367,9 +358,9 @@ export default function App() {
                     </span>
                     <span className="text-lg leading-loose">ant design</span>
                     <div className="absolute left-[-40px] top-0 w-[200px] h-full bg-black bg-opacity-70 text-white opacity-0 hover:opacity-100 hover:border-black hover:rounded-3xl">
-                      <h2 className="my-2 text-xl mx-[35%]">html5</h2>{" "}
+                      <h2 className="my-2 text-xl text-center whitespace-nowrap">ant design</h2>{" "}
                       <p className=" px-3 text-justify">
-                        웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
+                      ant design 을 적용해 프로젝트를 수행할 수 있습니다.
                       </p>
                     </div>
                     <div className="mb-6 h-1 w-full bg-neutral-200 dark:bg-neutral-600">
@@ -385,9 +376,9 @@ export default function App() {
                     </span>
                     <span className="text-lg leading-loose">tailwind</span>
                     <div className="absolute left-[-40px] top-0 w-[200px] h-full bg-black bg-opacity-70 text-white opacity-0 hover:opacity-100 hover:border-black hover:rounded-3xl">
-                      <h2 className="my-2 text-xl mx-[35%]">html5</h2>{" "}
+                      <h2 className="my-2 text-xl mx-[35%]">tailwind</h2>{" "}
                       <p className=" px-3 text-justify">
-                        웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
+                      tailwind를 적용해 프로젝트를 수행할 수있습니다.
                       </p>
                     </div>
                     <div className="mb-6 h-1 w-full bg-neutral-200 dark:bg-neutral-600">
@@ -402,9 +393,9 @@ export default function App() {
                     </span>
                     <span className="text-lg leading-loose">bootstrap</span>
                     <div className="absolute left-[-40px] top-0 w-[200px] h-[200px] bg-black bg-opacity-70 text-white opacity-0 hover:opacity-100 hover:border-black hover:rounded-3xl">
-                      <h2 className="my-2 text-xl mx-[35%]">html5</h2>{" "}
+                      <h2 className="my-2 text-xl mx-[35%]">bootstrap</h2>{" "}
                       <p className=" px-3 text-justify">
-                        웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
+                      bootstrap를 사용해 프로젝트를 수행 할 수있습니다.
                       </p>
                     </div>
                     <div className="mb-6 h-1 w-full bg-neutral-200 dark:bg-neutral-600">
@@ -420,9 +411,9 @@ export default function App() {
                     </span>
                     <span className="text-lg leading-loose">firebase</span>
                     <div className="absolute left-[-40px] top-0 w-[200px] h-full bg-black bg-opacity-70 text-white opacity-0 hover:opacity-100 hover:border-black hover:rounded-3xl">
-                      <h2 className="my-2 text-xl mx-[35%]">html5</h2>{" "}
+                      <h2 className="my-2 text-xl mx-[35%]">Firebase</h2>{" "}
                       <p className=" px-3 text-justify">
-                        웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
+                      Database 를 이용하여 실시간으로 데이터를 저장하고 동기화 할수 있습니다.
                       </p>
                     </div>
                     <div className="mb-6 h-1 w-full bg-neutral-200 dark:bg-neutral-600">
@@ -437,9 +428,9 @@ export default function App() {
                     </span>
                     <span className="text-lg leading-loose">redux</span>
                     <div className="absolute left-[-40px] top-0 w-[200px] h-full bg-black bg-opacity-70 text-white opacity-0 hover:opacity-100 hover:border-black hover:rounded-3xl">
-                      <h2 className="my-2 text-xl mx-[35%]">html5</h2>{" "}
+                      <h2 className="my-2 text-xl mx-[35%]">Redux </h2>{" "}
                       <p className=" px-3 text-justify">
-                        웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
+                      Redux-toolkit 을 이용하여 여러 컴포넌트에서 공유하는 데이터를 효율적으로 관리할 수 있습니다.'
                       </p>
                     </div>
                     <div className="mb-6 h-1 w-full bg-neutral-200 dark:bg-neutral-600">
@@ -579,7 +570,7 @@ export default function App() {
                       src="/videos/dosiraktong.gif"
                       alt="stx"
                     ></img>
-                    <div className="text-center text-white w-full rounded-xl h-full absolute top-0 left-0  bg-slate-600 grayscale hover:grayscale-0 hover:opacity-0">
+                    <div className="text-center text-white shadow-lg w-full rounded-xl h-full absolute top-0 left-0  bg-slate-600 grayscale hover:grayscale-0 hover:opacity-0">
                       <h2 className=" text-3xl font-bold mt-[16%] ">
                         도시락통
                       </h2>
@@ -673,7 +664,7 @@ export default function App() {
                   <div className="relative w-[21vw]  mx-4 h-[25vh] ">
                     <img
                       className="rounded-xl h-full"
-                      src="/videos/dosiraktong.gif"
+                      src="/videos/wonderplace.gif"
                       alt="stx"
                     ></img>
                     <div className="text-center text-white w-full rounded-xl h-full absolute top-0 left-0  bg-slate-600 grayscale hover:grayscale-0 hover:opacity-0">
@@ -729,35 +720,15 @@ export default function App() {
                     </button>
                     <div className="relative flex flex-col justify-center w-[16vw] h-[30vh] border-black border-8 border-black">
                       <div className="flex justify-center items-center ">
-                        <p className="px-[80px] nowrap text-center text-black font-bold text-xl">
-                          kyobo
-                        </p>
-                      </div>
-                      <img
-                        className="mx-auto w-[20vw] h-[20vh] hover:scale-110 transition-transform ease-in-out duration-500"
-                        src="/images/kyoborbg.png"
-                        alt="JUSTDOEAT"
-                      ></img>
-                      <motion.div
-                        animate={{
-                          opacity: modalVisible ? 1 : 0,
-                        }}
-                        transition={{
-                          duration: 3,
-                          type: "spring",
-                          stiffness: 200,
-                          damping: 20,
-                          delay: 0,
-                        }}
-                        className="bg-gray-100 rounded-lg h-[31vh] absolute top-[-15px] p-4 left-[-9px] w-[17vw] opacity-0 "
-                      >
+                     
+                     {modalVisible && <motion.div className="bg-gray-100 overflow-hidden rounded-lg h-[31vh] absolute top-[-15px] p-4 left-[-9px] w-[17vw] ">
                         <p className="text-center my-2 mt-5 font-bold text-3xl">
                           kyobo
                         </p>
                         <p className="text-xs text-center mb-7">
                           2023.01.11 ~ 2023.02.05
                         </p>
-                        <p className="my-4 text-xs text-center ">
+                        <p className="my-4 text-xs text-center  ">
                           프론트엔드 3명, 백엔드 4명 구성의 팀으로 진행한 요기요
                           딜리버리 구현 배달 서비스 프로젝트입니다.
                         </p>
@@ -770,12 +741,21 @@ export default function App() {
                         <p className="text-xs text-gray-600">
                           메뉴, 카테고리, 장바구니, 주문하기
                         </p>
-                      </motion.div>
+                      </motion.div>}
+                      <p className="px-[80px] nowrap text-center text-black font-bold text-xl">
+                          kyobo
+                        </p>
+                      </div>
+                      <img
+                        className="mx-auto w-[20vw] h-[20vh] hover:scale-110 transition-transform ease-in-out duration-500"
+                        src="/images/kyoborbg.png"
+                        alt="JUSTDOEAT"
+                      ></img>
                     </div>
                     <div className="flex justify-start items-center text-2xl gap-3 my-3">
                       <button
                         onClick={() =>
-                          window.open("https://youtu.be/3vGqb2JfWGo", "_blank")
+                          alert("동영상이 없습니다.")
                         }
                       >
                         <FaVideo className="text-black" />
@@ -786,7 +766,7 @@ export default function App() {
                           className="text-black"
                           onClick={() =>
                             window.open(
-                              "https://github.com/sirri1222/JUSTDOEAT",
+                              "https://github.com/sirri1222/kyobo-1",
                               "_blank"
                             )
                           }
@@ -811,19 +791,7 @@ export default function App() {
                         src="/images/cookierbg.png"
                         alt="JUSTDOEAT"
                       ></img>
-                      <motion.div
-                        animate={{
-                          opacity: modalVisible2 ? 1 : 0,
-                        }}
-                        transition={{
-                          duration: 3,
-                          type: "spring",
-                          stiffness: 200,
-                          damping: 20,
-                          delay: 0,
-                        }}
-                        className="bg-gray-100 rounded-lg absolute top-[-15px] p-4 left-[-9px] w-[17vw] h-[31vh] opacity-0 "
-                      >
+                     {modalVisible2 && <motion.div className="bg-gray-100 overflow-hidden rounded-lg absolute top-[-15px] p-4 left-[-9px] w-[17vw] h-[31vh] opacity-100 ">
                         <p className="text-center my-2 mt-5 font-bold text-3xl">
                           {" "}
                           JUST DO EAT
@@ -844,7 +812,7 @@ export default function App() {
                         <p className="text-xs text-gray-600">
                           메뉴, 카테고리, 장바구니, 주문하기
                         </p>
-                      </motion.div>
+                      </motion.div>}
                     </div>
                     <div className="flex justify-start items-center text-2xl gap-3 my-2">
                       <button
@@ -885,18 +853,8 @@ export default function App() {
                         src="/images/travelrbg.png"
                         alt="JUSTDOEAT"
                       ></img>
-                      <motion.div
-                        animate={{
-                          opacity: modalVisible3 ? 1 : 0,
-                        }}
-                        transition={{
-                          duration: 3,
-                          type: "spring",
-                          stiffness: 200,
-                          damping: 20,
-                          delay: 0,
-                        }}
-                        className={`bg-gray-100 rounded-lg absolute top-[-15px] p-4 left-[-9px] w-[17vw] opacity-0 h-[31vh]
+                     {modalVisible3 && <motion.div
+                        className={`bg-gray-100 overflow-hidden rounded-lg absolute top-[-15px] p-4 left-[-9px] w-[17vw] opacity-1 h-[31vh]
                           `}
                       >
                         <p className="text-center my-2 mt-5 font-bold text-3xl">
@@ -919,7 +877,7 @@ export default function App() {
                         <p className="text-xs text-gray-600">
                           메뉴, 카테고리, 장바구니, 좋아요,
                         </p>
-                      </motion.div>
+                      </motion.div>}
                     </div>
                     <div className="flex justify-start items-center text-2xl gap-3 my-2">
                       <button
@@ -935,7 +893,7 @@ export default function App() {
                           className="text-black"
                           onClick={() =>
                             window.open(
-                              "https://github.com/sirri1222/JUSTDOEAT",
+                              "https://github.com/sirri1222/Bon-voyage",
                               "_blank"
                             )
                           }
@@ -952,7 +910,7 @@ export default function App() {
                     <div className="relative flex flex-col justify-center w-[16vw] h-[30vh] border-8 border-black">
                       <div className="flex justify-center items-center ">
                         <p className="px-[80px] text-black nowrap text-center font-bold text-xl">
-                          Schoolfit
+                          Schoolfitness
                         </p>
                       </div>
                       <img
@@ -960,24 +918,12 @@ export default function App() {
                         src="/images/fitrbg.png"
                         alt="JUSTDOEAT"
                       ></img>
-                      <motion.div
-                        animate={{
-                          opacity: modalVisible4 ? 1 : 0,
-                        }}
-                        transition={{
-                          duration: 3,
-                          type: "spring",
-                          stiffness: 200,
-                          damping: 20,
-                          delay: 0,
-                        }}
-                        className="bg-gray-100 rounded-lg absolute top-[-15px] p-4 left-[-9px] w-[17vw] h-[31vh]  opacity-0  "
-                      >
+                    {modalVisible4 &&  <motion.div className="bg-gray-100 overflow-hidden rounded-lg absolute top-[-15px] p-4 left-[-9px] w-[17vw] h-[31vh]  opacity-100  ">
                         <p className="text-center my-2 mt-5 font-bold text-3xl">
-                          Schoolfit
+                          Schoolfitness
                         </p>
                         <p className="text-xs text-center mb-7">
-                          2023.01.11 ~ 2023.02.05
+                          2023.03.06 ~ 2023.04.04
                         </p>
                         <p className="my-4 text-xs text-center ">
                           프론트엔드 3명, 백엔드 4명 구성의 팀으로 진행한 요기요
@@ -992,7 +938,7 @@ export default function App() {
                         <p className="text-xs text-gray-600">
                           메뉴, 카테고리, 장바구니, 주문하기
                         </p>
-                      </motion.div>
+                      </motion.div>}
                     </div>
                     <div className="flex justify-start items-center text-2xl gap-3 my-2">
                       <button
@@ -1119,199 +1065,9 @@ export default function App() {
           </div>{" "}
         </SwiperSlide>
 
-        <SwiperSlide>
-          {" "}
-          <div className="bg-gray-100 w-[80vw] h-[70vh] mx-auto my-[9%] bg-opacity-80 rounded-lg ">
-            experience
-          </div>{" "}
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="bg-gray-100 w-[80vw] h-[70vh] mx-auto my-[9%] bg-opacity-80 rounded-lg "></div>{" "}
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="bg-gray-100 font-NanumSquare p-4 w-[80vw] h-[70vh] mx-auto my-[9%] bg-opacity-80 rounded-lg ">
-            <div className="text-center text-6xl pt-[40px] font-bold ">
-              SKILL
-            </div>
-            <div className="flex justify-around xl:pt-[100px] lg:pt-[50px]">
-              <div className="flex relative flex-col gap-2 w-[120px] items-center justify-center">
-                <span className="text-8xl text-[#FF5722]">
-                  <img src="skill/html.png" alt="html"></img>
-                </span>
-                <span className="text-2xl text-center">HTML</span>
-                <div className="absolute left-[-21px] top-0 w-[150px] h-full bg-black bg-opacity-70 text-white opacity-0 hover:opacity-100 hover:border-black hover:rounded-3xl">
-                  <h2 className="my-2 text-xl mx-[35%]">html5</h2>{" "}
-                  <p className=" px-3 text-justify">
-                    웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
-                  </p>
-                </div>
-              </div>
-              <div className="flex relative flex-col gap-2 items-center w-[120px] justify-center">
-                <span className="">
-                  <img className="" src="skill/css.png" alt="css"></img>
-                </span>
-                <span className="text-2xl">CSS</span>
-                <div className="absolute left-[-21px] top-0 w-[150px] h-full bg-black bg-opacity-70 text-white opacity-0 hover:opacity-100 hover:border-black hover:rounded-3xl">
-                  <h2 className="my-2 text-xl mx-[35%]">css3</h2>{" "}
-                  <p className=" px-3 text-justify">
-                    스타일시트 표준을 준수하여 코드를 작성할 수 있습니다.
-                  </p>
-                </div>
-              </div>
-              <div className="flex relative gap-2 flex-col w-[120px] items-center justify-center">
-                <span className="text-8xl text-[#F7DF1E]">
-                  <img src="skill/js.png" alt="js"></img>
-                </span>
-                <span className="text-2xl">javascript</span>
-                <div className="absolute left-[-21px] top-0 w-[150px] h-full bg-black bg-opacity-70 text-white opacity-0 hover:opacity-100 hover:border-black hover:rounded-3xl">
-                  <h2 className="my-2 text-xl mx-[35%]">js</h2>{" "}
-                  <p className=" px-3 text-justify">
-                    웹사이트에 필요한 동적 기능들을 구현할 수 있습니다.
-                  </p>
-                </div>
-              </div>
-              <div className="flex relative gap-2 flex-col w-[120px] items-center justify-center">
-                <span className="text-7xl text-[#007ACC]">
-                  <img src="skill/ts.png" alt="ts"></img>
-                </span>
-                <span className="text-2xl">typescript</span>
-                <div className="absolute left-[-21px] top-0 w-[150px] h-full bg-black bg-opacity-70 text-white opacity-0 hover:opacity-100 hover:border-black hover:rounded-3xl">
-                  <h2 className="my-2 text-xl mx-[35%]">typescript</h2>{" "}
-                  <p className=" px-3 text-justify">
-                    인터페이스와 제네릭에 대해 이해하고 있습니다.
-                  </p>
-                </div>
-              </div>
-              <div className="flex relative gap-2 flex-col w-[120px] items-center justify-center">
-                <span className="text-8xl text-[#CC6699]">
-                  <img src="skill/stylecomponent.png" alt="html"></img>
-                </span>
-                <span className="text-2xl whitespace-nowrap">
-                  styled-components
-                </span>
-                <div className="absolute left-[-21px] top-0 w-[150px] h-full bg-black bg-opacity-70 text-white opacity-0 hover:opacity-100 hover:border-black hover:rounded-3xl">
-                  <h2 className="my-2 text-xl mx-[35%]">html5</h2>{" "}
-                  <p className=" px-3 text-justify">
-                    웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
-                  </p>
-                </div>
-              </div>
-              <div className="flex relative gap-2 flex-col w-[120px] items-center justify-center">
-                <span className="text-8xl text-[#61DAFB]">
-                  <img src="skill/react.png" alt="react"></img>
-                </span>
-                <span className="text-2xl">react</span>
-                <div className="absolute left-[-21px] top-0 w-[150px] h-full bg-black bg-opacity-70 text-white opacity-0 hover:opacity-100 hover:border-black hover:rounded-3xl">
-                  <h2 className="my-2 text-xl mx-[35%]">html5</h2>{" "}
-                  <p className=" px-3 text-justify">
-                    웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="flex justify-around xl:pt-[70px] lg:pt-[50px]">
-              <div className="flex relative gap-2 flex-col w-[120px] items-center justify-center">
-                <span className="text-8xl text-[#A259EE]">
-                  <img src="skill/figma.png" alt="figma"></img>
-                </span>
-                <span className="text-2xl">figma</span>
-                <div className="absolute left-[-21px] top-0 w-[150px] h-full bg-black bg-opacity-70 text-white opacity-0 hover:opacity-100 hover:border-black hover:rounded-3xl">
-                  <h2 className="my-2 text-xl mx-[35%]">Figma</h2>{" "}
-                  <p className=" px-3 text-justify">
-                    컴포넌트에 맞는 UI,와이어프레임을 구성할 수 있습니다.
-                  </p>
-                </div>
-              </div>
-              <div className="flex relative gap-2 flex-col w-[120px] items-center justify-center">
-                <span className="text-8xl text-[#F64758]">
-                  <img src="skill/antdesign.png" alt="antdesign"></img>
-                </span>
-                <span className="text-2xl">ant design</span>
-                <div className="absolute left-[-21px] top-0 w-[150px] h-full bg-black bg-opacity-70 text-white opacity-0 hover:opacity-100 hover:border-black hover:rounded-3xl">
-                  <h2 className="my-2 text-xl mx-[35%]">html5</h2>{" "}
-                  <p className=" px-3 text-justify">
-                    웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
-                  </p>
-                </div>
-              </div>
-              <div className="flex relative gap-2 flex-col w-[120px] items-center justify-center">
-                <span className="text-6xl text-[#44A8B3]">
-                  <img src="skill/tailwind.png" alt="tailwind"></img>
-                </span>
-                <span className="text-2xl">tailwind</span>
-                <div className="absolute left-[-21px] top-0 w-[120px] h-full bg-black bg-opacity-70 text-white opacity-0 hover:opacity-100 hover:border-black hover:rounded-3xl">
-                  <h2 className="my-2 text-xl mx-[35%]">html5</h2>{" "}
-                  <p className=" px-3 text-justify">
-                    웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
-                  </p>
-                </div>
-              </div>
-              <div className="flex flex-col gap-2 w-[120px] items-center justify-center">
-                <span className="text-6xl text-[#7D12F9]">
-                  <img src="skill/bootstrap.png" alt="bootstrap"></img>
-                </span>
-                <span className="text-2xl">bootstrap</span>
-                <div className="absolute left-[0px] top-0 w-[120px] h-full bg-black bg-opacity-70 text-white opacity-0 hover:opacity-100 hover:border-black hover:rounded-3xl">
-                  <h2 className="my-2 text-xl mx-[35%]">html5</h2>{" "}
-                  <p className=" px-3 text-justify">
-                    웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
-                  </p>
-                </div>
-              </div>
-              <div className="flex relative gap-2 flex-col w-[120px] items-center justify-center">
-                <span className="text-6xl text-[#FFA712]">
-                  <img src="skill/firebase.png" alt="firebase"></img>
-                </span>
-                <span className="text-2xl">firebase</span>
-                <div className="absolute left-[0px] top-0 w-[120px] h-full bg-black bg-opacity-70 text-white opacity-0 hover:opacity-100 hover:border-black hover:rounded-3xl">
-                  <h2 className="my-2 text-xl mx-[35%]">html5</h2>{" "}
-                  <p className=" px-3 text-justify">
-                    웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
-                  </p>
-                </div>
-              </div>
-              <div className="flex relative gap-2 flex-col w-[120px] items-center justify-center">
-                <span className="text-6xl text-[#764ABC]">
-                  <img src="skill/redux.png" alt="redux"></img>
-                </span>
-                <span className="text-2xl">redux</span>
-                <div className="absolute left-[-21px] top-0 w-[200px] h-full bg-black bg-opacity-70 text-white opacity-0 hover:opacity-100 hover:border-black hover:rounded-3xl">
-                  <h2 className="my-2 text-xl mx-[35%]">html5</h2>{" "}
-                  <p className=" px-3 text-justify">
-                    웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
-                  </p>
-                </div>
-              </div>
-            </div>
-            {/* <div className="flex justify-around ml-2">
-              <span>css</span>
-              <span></span>
-              <span>typescript</span>
-              <span>scss</span>
-              <span>react</span>
-            </div>
-            <div className="flex justify-around pt-[120px] text-6xl">
-              <div className="border-[3px] p-3 rounded-[50%]">
-                <FaFigma />
-              </div>
-              <div className="border-[3px] p-3 rounded-[50%]">
-                <AiOutlineAntDesign />
-              </div>
-              <SiTailwindcss />
-              <BsFillBootstrapFill />
-              <SiFirebase />
-              <SiRedux />
-            </div>
-            <div className="flex justify-around ml-4">
-              <span>figma</span>
-              <span>ant design</span>
-              <span>tailwind</span>
-              <span>bootstrap</span>
-              <span>firebase</span>
-              <span>redux</span>
-            </div> */}
-          </div>{" "}
-        </SwiperSlide>
+       
+     
+     
       </Swiper>
       <Footer />
     </>

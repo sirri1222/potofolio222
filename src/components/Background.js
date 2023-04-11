@@ -3,7 +3,7 @@ const Background = () => {
   return (
     <div className="absolute">
       <video
-        className="object-cover h-screen w-screen"
+        className="object-cover grayscale-[30%] h-screen w-screen"
         autoPlay={true}
         controls={false}
         loop={true}
