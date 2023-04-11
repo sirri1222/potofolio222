@@ -47,7 +47,7 @@ export default function App() {
   const [modalVisible4, setModalVisible4] = useState(true);
 
   // 한글자씩 나타내기
- 
+
   const [text1, setText1] = useState("");
   const [text2, setText2] = useState("");
   const [count, setCount] = useState(0);
@@ -70,7 +70,10 @@ export default function App() {
     const typingInterval = setInterval(() => {
       if (count < firstTxt.length) {
         setText1((prevTxt) => prevTxt + firstTxt[count]);
-      } else if (count >= firstTxt.length && count < firstTxt.length + secondTxt.length) {
+      } else if (
+        count >= firstTxt.length &&
+        count < firstTxt.length + secondTxt.length
+      ) {
         setText2((prevTxt) => prevTxt + secondTxt[count - firstTxt.length]);
       }
 
@@ -105,8 +108,12 @@ export default function App() {
             </p>
           </div>
           <div className="mt-[20%] text-center w-[50%] ml-[25%] rounded-xl py-2 bg-blue-300 bg-opacity-50 ">
-            <h2 className="text-5xl  text-white drop-shadow-xl font-nm h-16 my-11 ">{text1}</h2>
-            <h2 className="text-5xl text-white drop-shadow-xl  font-nm h-16 my-11 ">{text2}</h2>
+            <h2 className="text-5xl  text-white drop-shadow-xl font-nm h-16 my-11 ">
+              {text1}
+            </h2>
+            <h2 className="text-5xl text-white drop-shadow-xl  font-nm h-16 my-11 ">
+              {text2}
+            </h2>
             {/* <img src="/images/1234.png" className="ml-[20%] mt-[-20%]  w-[1000px]" alt=""></img> */}
           </div>
           <div className="ml-[32%]"></div>
@@ -137,7 +144,6 @@ export default function App() {
                   <span className="text-[#000000]">손현지</span> 입니다
                 </p>
                 <p className="2xl:p-5 xl:p-5 lg:p-2 leading-1 2xl:opacity-100 xl:opacity-100 2xl:text-sm xl:text-sm lg:text-xs sm:opacity-0 xs:opacity-0">
-                 
                   <br /> 또한 UI 라이브러리인 Ant Design, Material-UI 등을
                   활용하여 보다 쉽게 사용자 인터페이스를 구현해본 경험이 있으며,
                   코드의 가독성, 유지보수성, 성능 등을 고려하여 코드를
@@ -269,7 +275,8 @@ export default function App() {
                     <div className="absolute left-[-40px] top-0 w-[200px] h-full bg-black bg-opacity-70 text-white opacity-0 hover:opacity-100 hover:border-black hover:rounded-3xl">
                       <h2 className="my-2 text-xl mx-[35%]">javascript</h2>{" "}
                       <p className=" px-3 text-justify">
-                      폼 유효성 검사, 스크롤 이벤트 및 애니메이션 등과 같은 다양한 동적 기능을 구현할 수 있습니다.
+                        폼 유효성 검사, 스크롤 이벤트 및 애니메이션 등과 같은
+                        다양한 동적 기능을 구현할 수 있습니다.
                       </p>
                     </div>
                     <div className="mb-6 h-1 w-full bg-neutral-200 dark:bg-neutral-600">
@@ -287,7 +294,8 @@ export default function App() {
                     <div className="absolute left-[-40px] top-0 w-[200px] h-full bg-black bg-opacity-70 text-white opacity-0 hover:opacity-100 hover:border-black hover:rounded-3xl">
                       <h2 className="my-2 text-xl mx-[35%]">typescript</h2>{" "}
                       <p className=" px-3 text-justify">
-                      Interface 를 정의해 코드 재사용성을 높일 수 있으며, 인터페이스와 제네릭에 대해 이해하고 있습니다. 
+                        Interface 를 정의해 코드 재사용성을 높일 수 있으며,
+                        인터페이스와 제네릭에 대해 이해하고 있습니다.
                       </p>
                     </div>
                     <div className="mb-6 h-1 w-full bg-neutral-200 dark:bg-neutral-600">
@@ -305,9 +313,12 @@ export default function App() {
                       styled-components
                     </span>
                     <div className="absolute left-[-40px] top-0 w-[200px] h-full bg-black bg-opacity-70 text-white opacity-0 hover:opacity-100 hover:border-black hover:rounded-3xl">
-                      <h2 className="my-2 text-xl text-center whitespace-nowrap">styled-components</h2>{" "}
+                      <h2 className="my-2 text-xl text-center whitespace-nowrap">
+                        styled-components
+                      </h2>{" "}
                       <p className=" px-3 text-justify">
-                      styled-components를 사용하여 css 작업을 수행할 수 있습니다.
+                        styled-components를 사용하여 css 작업을 수행할 수
+                        있습니다.
                       </p>
                     </div>
                     <div className="mb-6 h-1 w-full bg-neutral-200 dark:bg-neutral-600">
@@ -325,8 +336,9 @@ export default function App() {
                     <div className="absolute left-[-40px] top-0 w-[200px] h-full bg-black bg-opacity-70 text-white opacity-0 hover:opacity-100 hover:border-black hover:rounded-3xl">
                       <h2 className="my-2 text-xl mx-[35%]">react</h2>{" "}
                       <p className=" px-3 text-justify">
-                      useState, useEffect 등과 같은 Hooks 를 활용하여  상태 관리와 렌더링 작업, 라우팅 처리를 할 수 을 보다 간편하게 처리할 수 있습니다.
-                      
+                        useState, useEffect 등과 같은 Hooks 를 활용하여 상태
+                        관리와 렌더링 작업, 라우팅 처리를 할 수 을 보다 간편하게
+                        처리할 수 있습니다.
                       </p>
                     </div>
                     <div className="mb-6 h-1 w-full bg-neutral-200 dark:bg-neutral-600">
@@ -358,9 +370,11 @@ export default function App() {
                     </span>
                     <span className="text-lg leading-loose">ant design</span>
                     <div className="absolute left-[-40px] top-0 w-[200px] h-full bg-black bg-opacity-70 text-white opacity-0 hover:opacity-100 hover:border-black hover:rounded-3xl">
-                      <h2 className="my-2 text-xl text-center whitespace-nowrap">ant design</h2>{" "}
+                      <h2 className="my-2 text-xl text-center whitespace-nowrap">
+                        ant design
+                      </h2>{" "}
                       <p className=" px-3 text-justify">
-                      ant design 을 적용해 프로젝트를 수행할 수 있습니다.
+                        ant design 을 적용해 프로젝트를 수행할 수 있습니다.
                       </p>
                     </div>
                     <div className="mb-6 h-1 w-full bg-neutral-200 dark:bg-neutral-600">
@@ -378,7 +392,7 @@ export default function App() {
                     <div className="absolute left-[-40px] top-0 w-[200px] h-full bg-black bg-opacity-70 text-white opacity-0 hover:opacity-100 hover:border-black hover:rounded-3xl">
                       <h2 className="my-2 text-xl mx-[35%]">tailwind</h2>{" "}
                       <p className=" px-3 text-justify">
-                      tailwind를 적용해 프로젝트를 수행할 수있습니다.
+                        tailwind를 적용해 프로젝트를 수행할 수있습니다.
                       </p>
                     </div>
                     <div className="mb-6 h-1 w-full bg-neutral-200 dark:bg-neutral-600">
@@ -395,7 +409,7 @@ export default function App() {
                     <div className="absolute left-[-40px] top-0 w-[200px] h-[200px] bg-black bg-opacity-70 text-white opacity-0 hover:opacity-100 hover:border-black hover:rounded-3xl">
                       <h2 className="my-2 text-xl mx-[35%]">bootstrap</h2>{" "}
                       <p className=" px-3 text-justify">
-                      bootstrap를 사용해 프로젝트를 수행 할 수있습니다.
+                        bootstrap를 사용해 프로젝트를 수행 할 수있습니다.
                       </p>
                     </div>
                     <div className="mb-6 h-1 w-full bg-neutral-200 dark:bg-neutral-600">
@@ -413,7 +427,8 @@ export default function App() {
                     <div className="absolute left-[-40px] top-0 w-[200px] h-full bg-black bg-opacity-70 text-white opacity-0 hover:opacity-100 hover:border-black hover:rounded-3xl">
                       <h2 className="my-2 text-xl mx-[35%]">Firebase</h2>{" "}
                       <p className=" px-3 text-justify">
-                      Database 를 이용하여 실시간으로 데이터를 저장하고 동기화 할수 있습니다.
+                        Database 를 이용하여 실시간으로 데이터를 저장하고 동기화
+                        할수 있습니다.
                       </p>
                     </div>
                     <div className="mb-6 h-1 w-full bg-neutral-200 dark:bg-neutral-600">
@@ -430,7 +445,8 @@ export default function App() {
                     <div className="absolute left-[-40px] top-0 w-[200px] h-full bg-black bg-opacity-70 text-white opacity-0 hover:opacity-100 hover:border-black hover:rounded-3xl">
                       <h2 className="my-2 text-xl mx-[35%]">Redux </h2>{" "}
                       <p className=" px-3 text-justify">
-                      Redux-toolkit 을 이용하여 여러 컴포넌트에서 공유하는 데이터를 효율적으로 관리할 수 있습니다.'
+                        Redux-toolkit 을 이용하여 여러 컴포넌트에서 공유하는
+                        데이터를 효율적으로 관리할 수 있습니다.'
                       </p>
                     </div>
                     <div className="mb-6 h-1 w-full bg-neutral-200 dark:bg-neutral-600">
@@ -720,29 +736,32 @@ export default function App() {
                     </button>
                     <div className="relative flex flex-col justify-center w-[16vw] h-[30vh] border-black border-8 border-black">
                       <div className="flex justify-center items-center ">
-                     
-                     {modalVisible && <motion.div className="bg-gray-100 overflow-hidden rounded-lg h-[31vh] absolute top-[-15px] p-4 left-[-9px] w-[17vw] ">
-                        <p className="text-center my-2 mt-5 font-bold text-3xl">
-                          kyobo
-                        </p>
-                        <p className="text-xs text-center mb-7">
-                          2023.01.11 ~ 2023.02.05
-                        </p>
-                        <p className="my-4 text-xs text-center  ">
-                          프론트엔드 3명, 백엔드 4명 구성의 팀으로 진행한 요기요
-                          딜리버리 구현 배달 서비스 프로젝트입니다.
-                        </p>
-                        <p className="text-sm my-3 font-bold">기술 스택</p>
-                        <p className="text-xs text-gray-600 ">
-                          React.js, JavaScript, Redux Toolkit, Axios, Tailwind
-                          CSS
-                        </p>
-                        <p className="text-sm  my-3 font-bold">구현한 기능</p>
-                        <p className="text-xs text-gray-600">
-                          메뉴, 카테고리, 장바구니, 주문하기
-                        </p>
-                      </motion.div>}
-                      <p className="px-[80px] nowrap text-center text-black font-bold text-xl">
+                        {modalVisible && (
+                          <motion.div className="bg-gray-100 overflow-hidden rounded-lg h-[31vh] absolute top-[-15px] p-4 left-[-9px] w-[17vw] ">
+                            <p className="text-center my-2 mt-5 font-bold text-3xl">
+                              kyobo
+                            </p>
+                            <p className="text-xs text-center mb-7">
+                              2023.01.11 ~ 2023.02.05
+                            </p>
+                            <p className="my-4 text-xs text-center  ">
+                              프론트엔드 3명, 백엔드 4명 구성의 팀으로 진행한
+                              요기요 딜리버리 구현 배달 서비스 프로젝트입니다.
+                            </p>
+                            <p className="text-sm my-3 font-bold">기술 스택</p>
+                            <p className="text-xs text-gray-600 ">
+                              React.js, JavaScript, Redux Toolkit, Axios,
+                              Tailwind CSS
+                            </p>
+                            <p className="text-sm  my-3 font-bold">
+                              구현한 기능
+                            </p>
+                            <p className="text-xs text-gray-600">
+                              메뉴, 카테고리, 장바구니, 주문하기
+                            </p>
+                          </motion.div>
+                        )}
+                        <p className="px-[80px] nowrap text-center text-black font-bold text-xl">
                           kyobo
                         </p>
                       </div>
@@ -753,11 +772,7 @@ export default function App() {
                       ></img>
                     </div>
                     <div className="flex justify-start items-center text-2xl gap-3 my-3">
-                      <button
-                        onClick={() =>
-                          alert("동영상이 없습니다.")
-                        }
-                      >
+                      <button onClick={() => alert("동영상이 없습니다.")}>
                         <FaVideo className="text-black" />
                       </button>
                       <button>
@@ -791,28 +806,30 @@ export default function App() {
                         src="/images/cookierbg.png"
                         alt="JUSTDOEAT"
                       ></img>
-                     {modalVisible2 && <motion.div className="bg-gray-100 overflow-hidden rounded-lg absolute top-[-15px] p-4 left-[-9px] w-[17vw] h-[31vh] opacity-100 ">
-                        <p className="text-center my-2 mt-5 font-bold text-3xl">
-                          {" "}
-                          JUST DO EAT
-                        </p>
-                        <p className="text-xs text-center mb-7">
-                          2023.01.11 ~ 2023.02.05
-                        </p>
-                        <p className="my-4 text-xs text-center ">
-                          프론트엔드 3명, 백엔드 4명 구성의 팀으로 진행한 요기요
-                          딜리버리 구현 배달 서비스 프로젝트입니다.
-                        </p>
-                        <p className="text-sm my-3 font-bold">기술 스택</p>
-                        <p className="text-xs text-gray-600 ">
-                          React.js, JavaScript, Redux Toolkit, Axios, Tailwind
-                          CSS
-                        </p>
-                        <p className="text-sm  my-3 font-bold">구현한 기능</p>
-                        <p className="text-xs text-gray-600">
-                          메뉴, 카테고리, 장바구니, 주문하기
-                        </p>
-                      </motion.div>}
+                      {modalVisible2 && (
+                        <motion.div className="bg-gray-100 overflow-hidden rounded-lg absolute top-[-15px] p-4 left-[-9px] w-[17vw] h-[31vh] opacity-100 ">
+                          <p className="text-center my-2 mt-5 font-bold text-3xl">
+                            {" "}
+                            JUST DO EAT
+                          </p>
+                          <p className="text-xs text-center mb-7">
+                            2023.01.11 ~ 2023.02.05
+                          </p>
+                          <p className="my-4 text-xs text-center ">
+                            프론트엔드 3명, 백엔드 4명 구성의 팀으로 진행한
+                            요기요 딜리버리 구현 배달 서비스 프로젝트입니다.
+                          </p>
+                          <p className="text-sm my-3 font-bold">기술 스택</p>
+                          <p className="text-xs text-gray-600 ">
+                            React.js, JavaScript, Redux Toolkit, Axios,
+                            Tailwind, styled-component CSS
+                          </p>
+                          <p className="text-sm  my-3 font-bold">구현한 기능</p>
+                          <p className="text-xs text-gray-600">
+                            메뉴, 카테고리, 장바구니, 주문하기
+                          </p>
+                        </motion.div>
+                      )}
                     </div>
                     <div className="flex justify-start items-center text-2xl gap-3 my-2">
                       <button
@@ -853,31 +870,34 @@ export default function App() {
                         src="/images/travelrbg.png"
                         alt="JUSTDOEAT"
                       ></img>
-                     {modalVisible3 && <motion.div
-                        className={`bg-gray-100 overflow-hidden rounded-lg absolute top-[-15px] p-4 left-[-9px] w-[17vw] opacity-1 h-[31vh]
+                      {modalVisible3 && (
+                        <motion.div
+                          className={`bg-gray-100 overflow-hidden rounded-lg absolute top-[-15px] p-4 left-[-9px] w-[17vw] opacity-1 h-[31vh]
                           `}
-                      >
-                        <p className="text-center my-2 mt-5 font-bold text-3xl">
-                          {" "}
-                          Bon Voyage
-                        </p>
-                        <p className="text-xs text-center mb-7">
-                          2023.02.06 ~ 2023.03.02
-                        </p>
-                        <p className="my-4 text-xs text-center ">
-                          프론트엔드 3명, 백엔드 4명 구성의 팀으로 진행한
-                          국내여행 스케줄러 구현 플래너 서비스 프로젝트입니다.
-                        </p>
-                        <p className="text-sm my-3 font-bold">기술 스택</p>
-                        <p className="text-xs text-gray-600 ">
-                          React.js, JavaScript, Redux Toolkit, Axios, Tailwind
-                          CSS
-                        </p>
-                        <p className="text-sm  my-3 font-bold">구현한 기능</p>
-                        <p className="text-xs text-gray-600">
-                          메뉴, 카테고리, 장바구니, 좋아요,
-                        </p>
-                      </motion.div>}
+                        >
+                          <p className="text-center my-2 mt-5 font-bold text-3xl">
+                            {" "}
+                            Bon Voyage
+                          </p>
+                          <p className="text-xs text-center mb-7">
+                            2023.02.07 ~ 2023.03.03
+                          </p>
+                          <p className="my-4 text-xs text-center ">
+                            프론트엔드 3명, 백엔드 4명 구성의 팀으로 진행한
+                            국내여행 스케줄러 구현 플래너 서비스 프로젝트입니다.
+                          </p>
+                          <p className="text-sm my-3 font-bold">기술 스택</p>
+                          <p className="text-xs text-gray-600 ">
+                            React.js, JavaScript, Redux Toolkit, Axios, Tailwind
+                            CSS
+                          </p>
+                          <p className="text-sm  my-3 font-bold">구현한 기능</p>
+                          <p className="text-xs text-gray-600">
+                            로그인,여행지검색, 카테고리, 카카오지도
+                            API,여행스케줄 생성,마이페이지
+                          </p>
+                        </motion.div>
+                      )}
                     </div>
                     <div className="flex justify-start items-center text-2xl gap-3 my-2">
                       <button
@@ -918,27 +938,28 @@ export default function App() {
                         src="/images/fitrbg.png"
                         alt="JUSTDOEAT"
                       ></img>
-                    {modalVisible4 &&  <motion.div className="bg-gray-100 overflow-hidden rounded-lg absolute top-[-15px] p-4 left-[-9px] w-[17vw] h-[31vh]  opacity-100  ">
-                        <p className="text-center my-2 mt-5 font-bold text-3xl">
-                          Schoolfitness
-                        </p>
-                        <p className="text-xs text-center mb-7">
-                          2023.03.06 ~ 2023.04.04
-                        </p>
-                        <p className="my-4 text-xs text-center ">
-                          프론트엔드 3명, 백엔드 4명 구성의 팀으로 진행한 요기요
-                          딜리버리 구현 배달 서비스 프로젝트입니다.
-                        </p>
-                        <p className="text-sm my-3 font-bold">기술 스택</p>
-                        <p className="text-xs text-gray-600 ">
-                          React.js, JavaScript, Redux Toolkit, Axios, Tailwind
-                          CSS
-                        </p>
-                        <p className="text-sm  my-3 font-bold">구현한 기능</p>
-                        <p className="text-xs text-gray-600">
-                          메뉴, 카테고리, 장바구니, 주문하기
-                        </p>
-                      </motion.div>}
+                      {modalVisible4 && (
+                        <motion.div className="bg-gray-100 overflow-hidden rounded-lg absolute top-[-15px] p-4 left-[-9px] w-[17vw] h-[31vh]  opacity-100  ">
+                          <p className="text-center my-2 mt-5 font-bold text-3xl">
+                            Schoolfitness
+                          </p>
+                          <p className="text-xs text-center mb-7">
+                            2023.03.06 ~ 2023.04.04
+                          </p>
+                          <p className="my-4 text-xs text-center ">
+                            프론트엔드 5명, 백엔드 4명 구성의 팀으로 진행한
+                            요기요 딜리버리 구현 배달 서비스 프로젝트입니다.
+                          </p>
+                          <p className="text-sm my-3 font-bold">기술 스택</p>
+                          <p className="text-xs text-gray-600 ">
+                            React.js, JavaScript, recoil, Axios, Tailwind CSS
+                          </p>
+                          <p className="text-sm  my-3 font-bold">구현한 기능</p>
+                          <p className="text-xs text-gray-600">
+                            메인페이지, 헬스리포트, 게임, 마이스탬프, 더보기
+                          </p>
+                        </motion.div>
+                      )}
                     </div>
                     <div className="flex justify-start items-center text-2xl gap-3 my-2">
                       <button
@@ -1064,10 +1085,6 @@ export default function App() {
             </div>
           </div>{" "}
         </SwiperSlide>
-
-       
-     
-     
       </Swiper>
       <Footer />
     </>
