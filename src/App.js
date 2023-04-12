@@ -1014,14 +1014,14 @@ export default function App() {
                 <p className="absolute bottom-0 ">#커피</p>
               </div>
               <div className="grayscale overflow-hidden relative hover:filter-none w-[33vw] h-[35vh] bg-opacity-30">
-                <img
+               <img
                   className="overflow-hidden absolute top-0 z-10 opacity-0 hover:opacity-100"
                   src="/images/hyunji5.jpg"
                   alt="현지2"
                 ></img>
-                <img
+                 <img
                   className="overflow-hidden absolute top-0 w-[100%] opacity-100 hover:opacity-0"
-                  src="/images/art.png"
+                  src="./images/art.png"
                   alt="미술관"
                 ></img>
                 <p className="absolute bottom-0 ">#미술관</p>
