@@ -490,7 +490,7 @@ export default function App() {
                       src="/videos/stx.gif"
                       alt="stx"
                     ></img>
-                    <div className="text-center font-gw text-white w-full rounded-xl h-full absolute top-0 left-0  bg-slate-600 grayscale hover:grayscale-0 hover:opacity-0">
+                    <div className="text-center font-gw text-white w-full rounded-xl h-full absolute top-0 left-0  bg-slate-600 hover:grayscale-0 hover:opacity-0">
                       <h2 className=" text-3xl font-bold mt-[16%] ">
                         STX 건설
                       </h2>
@@ -539,7 +539,7 @@ export default function App() {
                       src="/videos/hansalim.gif"
                       alt="stx"
                     ></img>
-                    <div className="text-center text-white w-full rounded-xl h-full absolute top-0 left-0 bg-[#8C9CBD] grayscale hover:grayscale-0 hover:opacity-0">
+                    <div className="text-center text-white w-full rounded-xl h-full absolute top-0 left-0 bg-[#646e64]  hover:grayscale-0 hover:opacity-0">
                       <h2 className=" text-3xl font-bold  mt-[16%] ">
                         한살림 장보기
                       </h2>
@@ -739,7 +739,7 @@ export default function App() {
                     <div className="relative flex flex-col justify-center w-[16vw] h-[30vh] border-black border-8 border-black">
                       <div className="flex justify-center items-center ">
                         {modalVisible && (
-                          <motion.div className="bg-gray-100 overflow-hidden rounded-lg h-[31vh] absolute top-[-15px] p-4 left-[-9px] w-[17vw] ">
+                          <motion.div className="bg-blue-100 overflow-hidden rounded-lg h-[31vh] absolute top-[-15px] p-4 left-[-9px] w-[17vw] ">
                             <p className="text-center my-2 mt-5 font-bold text-3xl">
                               kyobo
                             </p>
@@ -759,7 +759,7 @@ export default function App() {
                               구현한 기능
                             </p>
                             <p className="text-xs text-gray-600">
-                              메뉴, 카테고리, 장바구니, 주문하기
+                              메뉴, 카테고리
                             </p>
                           </motion.div>
                         )}
@@ -809,7 +809,7 @@ export default function App() {
                         alt="JUSTDOEAT"
                       ></img>
                       {modalVisible2 && (
-                        <motion.div className="bg-gray-100 overflow-hidden rounded-lg absolute top-[-15px] p-4 left-[-9px] w-[17vw] h-[31vh] opacity-100 ">
+                        <motion.div className="bg-blue-100 overflow-hidden rounded-lg absolute top-[-15px] p-4 left-[-9px] w-[17vw] h-[31vh] opacity-100 ">
                           <p className="text-center my-2 mt-5 font-bold text-3xl">
                             {" "}
                             JUST DO EAT
@@ -874,7 +874,7 @@ export default function App() {
                       ></img>
                       {modalVisible3 && (
                         <motion.div
-                          className={`bg-gray-100 overflow-hidden rounded-lg absolute top-[-15px] p-4 left-[-9px] w-[17vw] opacity-1 h-[31vh]
+                          className={`bg-blue-100 overflow-hidden rounded-lg absolute top-[-15px] p-4 left-[-9px] w-[17vw] opacity-1 h-[31vh]
                           `}
                         >
                           <p className="text-center my-2 mt-5 font-bold text-3xl">
@@ -941,7 +941,7 @@ export default function App() {
                         alt="JUSTDOEAT"
                       ></img>
                       {modalVisible4 && (
-                        <motion.div className="bg-gray-100 overflow-hidden rounded-lg absolute top-[-15px] p-4 left-[-9px] w-[17vw] h-[31vh]  opacity-100  ">
+                        <motion.div className="bg-blue-100 overflow-hidden rounded-lg absolute top-[-15px] p-4 left-[-9px] w-[17vw] h-[31vh]  opacity-100  ">
                           <p className="text-center my-2 mt-5 font-bold text-3xl">
                             Schoolfitness
                           </p>
@@ -1038,7 +1038,7 @@ export default function App() {
                   src="/images/baking8.png"
                   alt="베이킹"
                 ></img>
-                <p className="absolute bottom-0 ">#독서</p>
+                <p className="absolute bottom-0 ">#</p>
               </div>
             </div>
             <div className="flex border-b-2 border-white">
