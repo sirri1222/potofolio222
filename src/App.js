@@ -1021,7 +1021,7 @@ export default function App() {
                 ></img>
                  <img
                   className="overflow-hidden absolute top-0 w-[100%] opacity-100 hover:opacity-0"
-                  src="./images/art.png"
+                  src="/images/art.png"
                   alt="미술관"
                 ></img>
                 <p className="absolute bottom-0 ">#미술관</p>
