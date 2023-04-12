@@ -97,7 +97,7 @@ export default function App() {
         className="mySwiper z-10 "
       >
         <SwiperSlide>
-          <div className="relative text-center bg-blue-300 z-13 mt-[10%] mb-[520px]">
+          <div className="relative text-center bg-blue-300 z-13 mt-[10%] mb-[450px]">
             <img
               src="/videos/main-9.png"
               className="w-[500px] h-[250px] absolute left-[37%]"
@@ -114,8 +114,8 @@ export default function App() {
             <h2 className="text-5xl text-white drop-shadow-xl  font-nm h-16 my-11 ">
               {text2}
             </h2>
-            {/* <img src="/images/1234.png" className="ml-[20%] mt-[-20%]  w-[1000px]" alt=""></img> */}
           </div>
+          {/* <img src="/images/7.png" className="ml-[38%] mt-[-10%] w-[400px]" alt="hyunji"></img> */}
           <div className="ml-[32%]"></div>
         </SwiperSlide>
 
@@ -128,7 +128,7 @@ export default function App() {
               <div className="mt-[-10px] 2xl:mt-8 xl:mt-8 lg:mt-8 sm:mt-3">
                 <img
                   className="mx-5 mt-[-30px] 2xl:w-[300px]  xl:w-[200px] lg:w-[200px] sm:w-[200px] xs:w-[150px]"
-                  src="/images/8638.png"
+                  src="/images/7.png"
                   alt="프로필"
                 ></img>
               </div>
@@ -144,12 +144,14 @@ export default function App() {
                   <span className="text-[#000000]">손현지</span> 입니다
                 </p>
                 <p className="2xl:p-5 xl:p-5 lg:p-2 leading-1 2xl:opacity-100 xl:opacity-100 2xl:text-sm xl:text-sm lg:text-xs sm:opacity-0 xs:opacity-0">
-                  <br /> 또한 UI 라이브러리인 Ant Design, Material-UI 등을
+                  <br /> 저는 주로 React를 사용하며, Redux, TypeScript 등의 기술
+                  스택을 활용해 협업 프로젝트에서도 원활한 소통과 개발을 할 수
+                  있습니다. 또한 UI 라이브러리인 Ant Design, Material-UI 등을
                   활용하여 보다 쉽게 사용자 인터페이스를 구현해본 경험이 있으며,
                   코드의 가독성, 유지보수성, 성능 등을 고려하여 코드를
-                  작성하려고 합니다. 또한 새로운 기술을 학습하고 이를 적용하는
-                  것에 대한 열정을 가지고 지금에 안주하지 않고 한발짜국 앞으로
-                  나아가고싶습니다.
+                  작성하려고 합니다. 또한 입사 후에도 새로운 기술을 학습하고
+                  이를 적용하는 것에 대한 열정을 가지고 성장을 위해
+                  나가가겠습니다.
                 </p>
               </div>
             </div>
@@ -1028,7 +1030,7 @@ export default function App() {
               <div className="grayscale relative  overflow-hidden bg-slate-500 border-x-2 hover:filter-none border-white w-[33vw] h-[35vh] bg-opacity-30">
                 <img
                   className="overflow-hidden absolute top-0 z-10 opacity-0 hover:opacity-100"
-                  src="/images/hyunji5.jpg"
+                  src="/images/book8.jpg"
                   alt="현지"
                 ></img>
                 <img
@@ -1036,7 +1038,7 @@ export default function App() {
                   src="/images/baking8.png"
                   alt="베이킹"
                 ></img>
-                <p className="absolute bottom-0 ">#경험</p>
+                <p className="absolute bottom-0 ">#독서</p>
               </div>
             </div>
             <div className="flex border-b-2 border-white">
