@@ -94,7 +94,7 @@ export default function App() {
         spaceBetween={30}
         mousewheel={true}
         modules={[Mousewheel]}
-        className="mySwiper z-10 "
+        className="mySwiper z-10 md:h-full "
       >
         <SwiperSlide>
           <div className="relative mt-[10%] ">
@@ -998,12 +998,12 @@ export default function App() {
             <div className="flex border-y-2 border-white">
               <div className="grayscale relative bg-slate-600 border-x-2 overflow-hidden hover:filter-none border-white w-[33vw] h-[35vh] bg-opacity-30">
                 <img
-                  className="overflow-hidden absolute top-0 z-10 opacity-0 hover:opacity-100"
+                  className="overflow-hidden absolute top-0 h-full w-full z-10 opacity-0 hover:opacity-100"
                   src="/images/hyunji6.jpg"
                   alt="현지1"
                 ></img>
                 <img
-                  className="overflow-hidden absolute top-0 opacity-100 hover:opacity-0"
+                  className="overflow-hidden h-full absolute top-0 opacity-100 hover:opacity-0"
                   src="/images/coffee.jpg"
                   alt="커피1"
                 ></img>
@@ -1011,12 +1011,12 @@ export default function App() {
               </div>
               <div className="grayscale overflow-hidden relative hover:filter-none w-[33vw] h-[35vh] bg-opacity-30">
                 <img
-                  className="overflow-hidden absolute top-0 z-10 opacity-0 hover:opacity-100"
+                  className="overflow-hidden h-full w-full absolute top-0 z-10 opacity-0 hover:opacity-100"
                   src="/images/hyunji5.jpg"
                   alt="현지2"
                 ></img>
                 <img
-                  className="overflow-hidden absolute top-0 w-[100%] opacity-100 hover:opacity-0"
+                  className="overflow-hidden h-full absolute top-0 w-[100%] opacity-100 hover:opacity-0"
                   src="/images/art.png"
                   alt="미술관"
                 ></img>
@@ -1025,27 +1025,27 @@ export default function App() {
 
               <div className="grayscale relative  overflow-hidden bg-slate-500 border-x-2 hover:filter-none border-white w-[33vw] h-[35vh] bg-opacity-30">
                 <img
-                  className="overflow-hidden absolute top-0 z-10 opacity-0 hover:opacity-100"
+                  className="overflow-hidden h-full w-full absolute top-0 z-10 opacity-0 hover:opacity-100"
                   src="/images/book8.jpg"
                   alt="현지"
                 ></img>
                 <img
-                  className="overflow-hidden absolute w-[100%] top-0 opacity-100 hover:opacity-0"
+                  className="overflow-hidden h-full absolute w-[100%] top-0 opacity-100 hover:opacity-0"
                   src="/images/baking8.png"
                   alt="베이킹"
                 ></img>
-                <p className="absolute bottom-0 ">#</p>
+                <p className="absolute bottom-0 ">#독서</p>
               </div>
             </div>
             <div className="flex border-b-2 border-white">
               <div className="relative overflow-hidden hover:filter-none grayscale bg-slate-400 border-x-2 border-white w-[33vw] h-[35vh] bg-opacity-30">
                 <img
-                  className="overflow-hidden absolute top-0 z-10 opacity-0 hover:opacity-100"
+                  className="overflow-hidden h-full w-full absolute top-0 z-10 opacity-0 hover:opacity-100"
                   src="/images/exercise.jpg"
                   alt="현지운동"
                 ></img>
                 <img
-                  className="overflow-hidden w-[100%] absolute top-0 opacity-100 hover:opacity-0"
+                  className="overflow-hidden w-full h-full absolute top-0 opacity-100 hover:opacity-0"
                   src="/images/exercise4.png"
                   alt="운동"
                 ></img>
@@ -1053,12 +1053,12 @@ export default function App() {
               </div>
               <div className="grayscale relative overflow-hidden hover:filter-none bg-slate-500 w-[33vw] h-[35vh] bg-opacity-30">
                 <img
-                  className="overflow-hidden absolute top-0 z-10 opacity-0 hover:opacity-100"
+                  className="overflow-hidden h-full w-full absolute top-0 z-10 opacity-0 hover:opacity-100"
                   src="/images/travel.jpg"
                   alt="현지여행"
                 ></img>
                 <img
-                  className="overflow-hidden w-[100%] absolute top-0 opacity-100 hover:opacity-0"
+                  className="overflow-hidden h-full w-full absolute top-0 opacity-100 hover:opacity-0"
                   src="/images/travel1.png"
                   alt="여행"
                 ></img>
@@ -1066,12 +1066,12 @@ export default function App() {
               </div>
               <div className="grayscale relative overflow-hidden hover:filter-none bg-slate-300 border-x-2 border-white w-[33vw] h-[35vh] bg-opacity-30">
                 <img
-                  className="overflow-hidden absolute top-0 z-10 opacity-0 hover:opacity-100"
+                  className="overflow-hidden absolute h-full w-full top-0 z-10 opacity-0 hover:opacity-100"
                   src="/images/IMG_1881.jpeg"
                   alt="현지등산"
                 ></img>
                 <img
-                  className="overflow-hidden absolute w-[100%] top-0 opacity-100 hover:opacity-0"
+                  className="overflow-hidden absolute w-full h-full top-0 opacity-100 hover:opacity-0"
                   src="/images/tree.png"
                   alt="등산"
                 ></img>
