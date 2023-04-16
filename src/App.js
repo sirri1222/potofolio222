@@ -33,7 +33,7 @@ import { Link } from "react-router-dom";
 
 export default function App() {
   const projectArr = ["clone", "team project"];
-  const [filtered, setFiltered] = useState(projectArr[1]);
+  const [filtered, setFiltered] = useState(projectArr[0]);
   const cloneHandler = () => {
     setFiltered(projectArr[0]);
   };
@@ -535,16 +535,16 @@ export default function App() {
                       src="/videos/hansalim.gif"
                       alt="stx"
                     ></img>
-                    
+
                     <div className="text-center text-white w-full rounded-xl h-full absolute top-0 left-0 bg-[#646e64]  hover:grayscale-0 hover:opacity-0">
                       <h2 className=" text-3xl font-bold  mt-[16%] ">
                         한살림 장보기
                       </h2>
                       <p className="my-3">2022. 11. 09 ~ 2022. 12. 21 </p>
-                      <p>사용 프로그램 : HTML, CSS, JavaScript</p> 
-                    
+                      <p>사용 프로그램 : HTML, CSS, JavaScript</p>
+
                     </div>
-                     <div className="flex absolute bottom-7 left-[50%] translate-x-[-50%] justify-center gap-4 items-center text-xl text-black hover:opacity-100">
+                    <div className="flex absolute bottom-7 left-[50%] translate-x-[-50%] justify-center gap-4 items-center text-xl text-black hover:opacity-100">
                       <button
                         onClick={() =>
                           window.open(
@@ -729,73 +729,74 @@ export default function App() {
             {filtered === "team project" && (
               <div className=" mx-auto 2xl:my-[200px] xl:my-[200px] lg:my-[100px] sm:my-[80px] xs:my-[100px] ">
                 <div className="2xl:flex xl:flex my-7">
-                  <div className="md:flex sm:flex"> <div className="mx-5 ">
-                    {" "}
-                    <button onClick={openHandler}>
-                      <MdOutlineArrowDropDownCircle className="text-black" />
-                    </button>
-                    <div className="relative flex flex-col justify-center w-[16vw] h-[30vh] border-black border-8 border-black">
-                      <div className="flex justify-center items-center ">
-                        {modalVisible && (
-                          <motion.div className="bg-blue-100 overflow-hidden rounded-lg h-[31vh] absolute top-[-15px] p-4 left-[-9px] w-[17vw] ">
-                            <p className="text-center my-2 mt-5 font-bold text-3xl">
-                              kyobo
-                            </p>
-                            <p className="text-xs text-center mb-7">
-                              2023.01.11 ~ 2023.02.05
-                            </p>
-                            <p className="my-4 text-xs text-center  ">
-                              프론트엔드 3명, 백엔드 4명 구성의 팀으로 진행한
-                              요기요 딜리버리 구현 배달 서비스 프로젝트입니다.
-                            </p>
-                            <p className="text-sm my-3 font-bold">기술 스택</p>
-                            <p className="text-xs text-gray-600 ">
-                              React.js, JavaScript, Redux Toolkit, Axios,
-                              Tailwind CSS
-                            </p>
-                            <p className="text-sm  my-3 font-bold">
-                              구현한 기능
-                            </p>
-                            <p className="text-xs text-gray-600">
-                              메뉴, 카테고리
-                            </p>
-                          </motion.div>
-                        )}
-                        <p className="px-[80px] nowrap text-center text-black font-bold text-xl">
-                          kyobo
-                        </p>
+                  <div className="md:flex sm:flex 2xl:gap-0 xl:gap-0 md:gap-32 sm:gap-32">
+                    <div className="mx-5 ">
+                      {" "}
+                      <button onClick={openHandler}>
+                        <MdOutlineArrowDropDownCircle className="text-black" />
+                      </button>
+                      <div className="relative flex flex-col justify-center w-[16vw] 2xl:h-[30vh] xl:h-[30vh] md:h-[22vh] sm:h-[22vh]  border-black border-8 border-black">
+                        <div className="flex justify-center items-center  ">
+                          {modalVisible && (
+                            <motion.div className="bg-blue-100 overflow-hidden rounded-lg 2xl:h-[31vh] xl:h-[31vh] md:h-[23vh] sm:h-[23vh] absolute top-[-15px] p-4 left-[-9px] 2xl:w-[17vw] xl:w-[17vw] md:w-[25vw] sm:w-[25vw] ">
+                              <p className="text-center my-2 mt-5 font-bold text-3xl">
+                                kyobo
+                              </p>
+                              <p className="text-xs text-center mb-7">
+                                2023.01.11 ~ 2023.02.05
+                              </p>
+                              <p className="my-4 text-xs text-center  ">
+                                프론트엔드 3명, 백엔드 4명 구성의 팀으로 진행한
+                                요기요 딜리버리 구현 배달 서비스 프로젝트입니다.
+                              </p>
+                              <p className="text-sm my-3 font-bold">기술 스택</p>
+                              <p className="text-xs text-gray-600 ">
+                                React.js, JavaScript, Redux Toolkit, Axios,
+                                Tailwind CSS
+                              </p>
+                              <p className="text-sm  my-3 font-bold">
+                                구현한 기능
+                              </p>
+                              <p className="text-xs text-gray-600">
+                                메뉴, 카테고리
+                              </p>
+                            </motion.div>
+                          )}
+                          <p className="px-[80px] nowrap text-center text-black font-bold text-xl">
+                            kyobo
+                          </p>
+                        </div>
+                        <img
+                          className="mx-auto w-[20vw] h-[20vh] hover:scale-110 transition-transform ease-in-out duration-500"
+                          src="/images/kyoborbg.png"
+                          alt="JUSTDOEAT"
+                        ></img>
                       </div>
-                      <img
-                        className="mx-auto w-[20vw] h-[20vh] hover:scale-110 transition-transform ease-in-out duration-500"
-                        src="/images/kyoborbg.png"
-                        alt="JUSTDOEAT"
-                      ></img>
+                      <div className="flex justify-center items-center text-5xl gap-5 my-2">
+                        <button onClick={() => alert("동영상이 없습니다.")}>
+                          <FaVideo className="text-black" />
+                        </button>
+                        <button>
+                          {" "}
+                          <RiGithubLine
+                            className="text-black"
+                            onClick={() =>
+                              window.open(
+                                "https://github.com/sirri1222/kyobo-1",
+                                "_blank"
+                              )
+                            }
+                          />
+                        </button>
+                      </div>
                     </div>
-                    <div className="flex justify-center items-center text-5xl gap-5 my-2">
-                      <button onClick={() => alert("동영상이 없습니다.")}>
-                        <FaVideo className="text-black" />
-                      </button>
-                      <button>
-                        {" "}
-                        <RiGithubLine
-                          className="text-black"
-                          onClick={() =>
-                            window.open(
-                              "https://github.com/sirri1222/kyobo-1",
-                              "_blank"
-                            )
-                          }
-                        />
-                      </button>
-                    </div>
-                  </div>
 
                     <div className="mx-5">
                       {" "}
                       <button onClick={openHandler2}>
                         <MdOutlineArrowDropDownCircle className="text-black" />
                       </button>
-                      <div className="relative flex flex-col justify-center w-[16vw] h-[30vh] border-8 border-black">
+                      <div className="relative flex flex-col justify-center w-[16vw] 2xl:h-[30vh] xl:h-[30vh] md:h-[22vh] sm:h-[22vh] border-8 border-black ">
                         <div className="flex justify-center items-center ">
                           <p className="px-[80px] nowrap text-center font-bold text-xl text-black">
                             JUST DO EAT
@@ -807,7 +808,7 @@ export default function App() {
                           alt="JUSTDOEAT"
                         ></img>
                         {modalVisible2 && (
-                          <motion.div className="bg-blue-100 overflow-hidden rounded-lg absolute top-[-15px] p-4 left-[-9px] w-[17vw] h-[31vh] opacity-100 ">
+                          <motion.div className="bg-blue-100 overflow-hidden rounded-lg absolute top-[-15px] p-4 left-[-9px] 2xl:w-[17vw] xl:w-[17vw] md:w-[25vw] sm:w-[25vw] 2xl:h-[31vh] xl:h-[31vh] md:h-[23vh] sm:h-[23vh] opacity-100 ">
                             <p className="text-center my-2 mt-5 font-bold text-3xl">
                               {" "}
                               JUST DO EAT
@@ -855,13 +856,13 @@ export default function App() {
                       </div>
                     </div>
                   </div>
-                  <div className="md:flex md:justify-around sm:flex">
+                  <div className="md:flex sm:flex 2xl:gap-0 xl:gap-0 md:gap-32 sm:gap-32 ">
                     <div className="mx-5">
                       {" "}
                       <button onClick={openHandler3}>
                         <MdOutlineArrowDropDownCircle className="text-black" />
                       </button>
-                      <div className="relative flex flex-col justify-center w-[16vw] h-[30vh] border-8 border-black">
+                      <div className="relative flex flex-col justify-center w-[16vw] 2xl:h-[30vh] xl:h-[30vh] md:h-[22vh] sm:h-[22vh] border-8 border-black">
                         <div className="flex justify-center items-center ">
                           <p className="px-[80px] nowrap text-center text-black font-bold text-xl">
                             Bon Voyage
@@ -874,7 +875,7 @@ export default function App() {
                         ></img>
                         {modalVisible3 && (
                           <motion.div
-                            className={`bg-blue-100 overflow-hidden rounded-lg absolute top-[-15px] p-4 left-[-9px] w-[17vw]  opacity-1 h-[31vh] 
+                            className={`bg-blue-100 overflow-hidden rounded-lg absolute top-[-15px] p-4 left-[-9px] 2xl:w-[17vw] xl:w-[17vw] md:w-[25vw] sm:w-[25vw] opacity-1 2xl:h-[31vh] xl:h-[31vh] md:h-[23vh] sm:h-[23vh] 
                           `}
                           >
                             <p className="text-center my-2 mt-5 font-bold text-3xl">
@@ -929,7 +930,7 @@ export default function App() {
                       <button onClick={openHandler4}>
                         <MdOutlineArrowDropDownCircle className="text-black" />
                       </button>
-                      <div className="relative flex flex-col justify-center w-[16vw] h-[30vh] border-8 border-black">
+                      <div className="relative flex flex-col justify-center w-[16vw] 2xl:h-[30vh] xl:h-[30vh] md:h-[22vh] sm:h-[22vh] border-8 border-black">
                         <div className="flex justify-center items-center ">
                           <p className="px-[80px] text-black nowrap text-center font-bold text-xl">
                             Schoolfitness
@@ -941,7 +942,7 @@ export default function App() {
                           alt="JUSTDOEAT"
                         ></img>
                         {modalVisible4 && (
-                          <motion.div className="bg-blue-100 overflow-hidden rounded-lg absolute top-[-15px] p-4 left-[-9px] w-[17vw] h-[31vh]  opacity-100  ">
+                          <motion.div className="bg-blue-100 overflow-hidden rounded-lg absolute top-[-15px] p-4 left-[-9px] 2xl:w-[17vw] xl:w-[17vw] md:w-[25vw] sm:w-[25vw] 2xl:h-[31vh] xl:h-[31vh] md:h-[23vh] sm:h-[23vh] opacity-100">
                             <p className="text-center my-2 mt-5 font-bold text-3xl">
                               Schoolfitness
                             </p>
@@ -954,7 +955,7 @@ export default function App() {
                             </p>
                             <p className="text-sm my-3 font-bold">기술 스택</p>
                             <p className="text-xs text-gray-600 ">
-                              React.js, JavaScript, recoil, Axios, Tailwind CSS
+                              React.js, TypeScript, recoil, Axios, Tailwind CSS, styled components
                             </p>
                             <p className="text-sm  my-3 font-bold">구현한 기능</p>
                             <p className="text-xs text-gray-600">
