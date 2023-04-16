@@ -726,8 +726,8 @@ export default function App() {
             )}
             {filtered === "team project" && (
               <div className=" mx-auto 2xl:my-[200px] xl:my-[200px] lg:my-[100px] sm:my-[80px] xs:my-[100px] ">
-                <div className="flex my-7">
-                  <div className="mx-5">
+                <div className="2xl:flex xl:flex my-7">
+                  <div className="md:flex sm:flex"> <div className="mx-5 ">
                     {" "}
                     <button onClick={openHandler}>
                       <MdOutlineArrowDropDownCircle className="text-black" />
@@ -769,7 +769,7 @@ export default function App() {
                         alt="JUSTDOEAT"
                       ></img>
                     </div>
-                    <div className="flex justify-start items-center text-2xl gap-3 my-3">
+                    <div className="flex justify-center items-center text-5xl gap-5 my-2">
                       <button onClick={() => alert("동영상이 없습니다.")}>
                         <FaVideo className="text-black" />
                       </button>
@@ -788,70 +788,72 @@ export default function App() {
                     </div>
                   </div>
 
-                  <div className="mx-5">
-                    {" "}
-                    <button onClick={openHandler2}>
-                      <MdOutlineArrowDropDownCircle className="text-black" />
-                    </button>
-                    <div className="relative flex flex-col justify-center w-[16vw] h-[30vh] border-8 border-black">
-                      <div className="flex justify-center items-center ">
-                        <p className="px-[80px] nowrap text-center font-bold text-xl text-black">
-                          JUST DO EAT
-                        </p>
-                      </div>
-                      <img
-                        className="mx-auto w-[20vw] h-[20vh] hover:scale-110 transition-transform ease-in-out duration-500"
-                        src="/images/cookierbg.png"
-                        alt="JUSTDOEAT"
-                      ></img>
-                      {modalVisible2 && (
-                        <motion.div className="bg-blue-100 overflow-hidden rounded-lg absolute top-[-15px] p-4 left-[-9px] w-[17vw] h-[31vh] opacity-100 ">
-                          <p className="text-center my-2 mt-5 font-bold text-3xl">
-                            {" "}
+                    <div className="mx-5">
+                      {" "}
+                      <button onClick={openHandler2}>
+                        <MdOutlineArrowDropDownCircle className="text-black" />
+                      </button>
+                      <div className="relative flex flex-col justify-center w-[16vw] h-[30vh] border-8 border-black">
+                        <div className="flex justify-center items-center ">
+                          <p className="px-[80px] nowrap text-center font-bold text-xl text-black">
                             JUST DO EAT
                           </p>
-                          <p className="text-xs text-center mb-7">
-                            2023.01.11 ~ 2023.02.05
-                          </p>
-                          <p className="my-4 text-xs text-center ">
-                            프론트엔드 3명, 백엔드 4명 구성의 팀으로 진행한
-                            요기요 딜리버리 구현 배달 서비스 프로젝트입니다.
-                          </p>
-                          <p className="text-sm my-3 font-bold">기술 스택</p>
-                          <p className="text-xs text-gray-600 ">
-                            React.js, JavaScript, Redux Toolkit, Axios,
-                            Tailwind, styled-component CSS
-                          </p>
-                          <p className="text-sm  my-3 font-bold">구현한 기능</p>
-                          <p className="text-xs text-gray-600">
-                            메뉴, 카테고리, 장바구니, 주문하기
-                          </p>
-                        </motion.div>
-                      )}
-                    </div>
-                    <div className="flex justify-start items-center text-2xl gap-3 my-2">
-                      <button
-                        onClick={() =>
-                          window.open("https://youtu.be/3vGqb2JfWGo", "_blank")
-                        }
-                      >
-                        <FaVideo className="text-black" />
-                      </button>
-                      <button>
-                        {" "}
-                        <RiGithubLine
-                          className="text-black"
+                        </div>
+                        <img
+                          className="mx-auto w-[20vw] h-[20vh] hover:scale-110 transition-transform ease-in-out duration-500"
+                          src="/images/cookierbg.png"
+                          alt="JUSTDOEAT"
+                        ></img>
+                        {modalVisible2 && (
+                          <motion.div className="bg-blue-100 overflow-hidden rounded-lg absolute top-[-15px] p-4 left-[-9px] w-[17vw] h-[31vh] opacity-100 ">
+                            <p className="text-center my-2 mt-5 font-bold text-3xl">
+                              {" "}
+                              JUST DO EAT
+                            </p>
+                            <p className="text-xs text-center mb-7">
+                              2023.01.11 ~ 2023.02.05
+                            </p>
+                            <p className="my-4 text-xs text-center ">
+                              프론트엔드 3명, 백엔드 4명 구성의 팀으로 진행한
+                              요기요 딜리버리 구현 배달 서비스 프로젝트입니다.
+                            </p>
+                            <p className="text-sm my-3 font-bold">기술 스택</p>
+                            <p className="text-xs text-gray-600 ">
+                              React.js, JavaScript, Redux Toolkit, Axios,
+                              Tailwind, styled-component CSS
+                            </p>
+                            <p className="text-sm  my-3 font-bold">구현한 기능</p>
+                            <p className="text-xs text-gray-600">
+                              메뉴, 카테고리, 장바구니, 주문하기
+                            </p>
+                          </motion.div>
+                        )}
+                      </div>
+
+                      <div className="flex justify-center items-center text-5xl gap-5 my-2">
+                        <button
                           onClick={() =>
-                            window.open(
-                              "https://github.com/sirri1222/JUSTDOEAT",
-                              "_blank"
-                            )
+                            window.open("https://youtu.be/3vGqb2JfWGo", "_blank")
                           }
-                        />
-                      </button>
+                        >
+                          <FaVideo className="text-black" />
+                        </button>
+                        <button>
+                          {" "}
+                          <RiGithubLine
+                            className="text-black"
+                            onClick={() =>
+                              window.open(
+                                "https://github.com/sirri1222/JUSTDOEAT",
+                                "_blank"
+                              )
+                            }
+                          />
+                        </button>
+                      </div>
                     </div>
                   </div>
-
+                  <div className="md:flex md:justify-around sm:flex">
                   <div className="mx-5">
                     {" "}
                     <button onClick={openHandler3}>
@@ -870,7 +872,7 @@ export default function App() {
                       ></img>
                       {modalVisible3 && (
                         <motion.div
-                          className={`bg-blue-100 overflow-hidden rounded-lg absolute top-[-15px] p-4 left-[-9px] w-[17vw] opacity-1 h-[31vh]
+                          className={`bg-blue-100 overflow-hidden rounded-lg absolute top-[-15px] p-4 left-[-9px] w-[17vw]  opacity-1 h-[31vh] 
                           `}
                         >
                           <p className="text-center my-2 mt-5 font-bold text-3xl">
@@ -897,7 +899,7 @@ export default function App() {
                         </motion.div>
                       )}
                     </div>
-                    <div className="flex justify-start items-center text-2xl gap-3 my-2">
+                    <div className="flex justify-center items-center text-5xl gap-5 my-2">
                       <button
                         onClick={() =>
                           window.open("https://youtu.be/ePmlGtwn984", "_blank")
@@ -959,7 +961,7 @@ export default function App() {
                         </motion.div>
                       )}
                     </div>
-                    <div className="flex justify-start items-center text-2xl gap-3 my-2">
+                    <div className="flex justify-center items-center text-5xl gap-5 my-2">
                       <button
                         onClick={() =>
                           window.open(
@@ -985,7 +987,7 @@ export default function App() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div></div>
             )}
 
             <div></div>
