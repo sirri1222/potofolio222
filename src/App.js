@@ -97,17 +97,15 @@ export default function App() {
         className="mySwiper z-10 "
       >
         <SwiperSlide>
-          <div className="relative text-center bg-blue-300 z-13 mt-[10%] mb-[450px]">
+          <div className="relative mt-[10%] ">
             <img
-              src="/videos/main-9.png"
-              className="w-[500px] h-[250px] absolute left-[37%]"
+              src="/images/hyunjimain.png"
+              className="w-[500px] h-[400px] mx-auto "
               alt="dd"
             ></img>
-            <p className="text-7xl absolute top-0 left-[38%] text-white mb- mt-10 font-nm w-3/12 h-[150px] rounded-full ">
-              hyunji
-            </p>
+
           </div>
-          <div className="mt-[20%] text-center w-[50%] ml-[25%] rounded-xl py-2 bg-blue-300 bg-opacity-50 ">
+          <div className="my-auto text-center w-[50%] ml-[25%] rounded-xl py-2 bg-blue-300 bg-opacity-50 ">
             <h2 className="text-5xl  text-white drop-shadow-xl font-nm h-16 my-11 ">
               {text1}
             </h2>
@@ -465,17 +463,15 @@ export default function App() {
           <div className="bg-gray-100 w-[80vw] h-[70vh] mx-auto my-[9%] bg-opacity-80 rounded-lg flex ">
             <div className="flex gap-5 justify-end absolute left-[42%] my-7 ">
               <button
-                className={`text-3xl font-semibold text-black rounded-3xl p-2 ${
-                  filtered === "clone" && "bg-black text-white"
-                }`}
+                className={`text-3xl font-semibold text-black rounded-3xl p-2 ${filtered === "clone" && "bg-black text-white"
+                  }`}
                 onClick={cloneHandler}
               >
                 {projectArr[0]}
               </button>
               <button
-                className={`text-3xl font-semibold rounded-3xl text-black p-2  ${
-                  filtered === "team project" && "bg-black text-white"
-                }`}
+                className={`text-3xl font-semibold rounded-3xl text-black p-2  ${filtered === "team project" && "bg-black text-white"
+                  }`}
                 onClick={teamProjectHandler}
               >
                 {projectArr[1]}
@@ -1014,12 +1010,12 @@ export default function App() {
                 <p className="absolute bottom-0 ">#커피</p>
               </div>
               <div className="grayscale overflow-hidden relative hover:filter-none w-[33vw] h-[35vh] bg-opacity-30">
-               <img
+                <img
                   className="overflow-hidden absolute top-0 z-10 opacity-0 hover:opacity-100"
                   src="/images/hyunji5.jpg"
                   alt="현지2"
                 ></img>
-                 <img
+                <img
                   className="overflow-hidden absolute top-0 w-[100%] opacity-100 hover:opacity-0"
                   src="/images/art.png"
                   alt="미술관"
