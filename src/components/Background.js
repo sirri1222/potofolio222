@@ -1,7 +1,7 @@
 const Background = () => {
   const path = process.env.PUBLIC_URL;
   return (
-    <div className="absolute">
+    <div className="absolute ">
       <video
         className="object-cover grayscale-[30%] h-screen w-screen"
         autoPlay={true}

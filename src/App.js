@@ -30,6 +30,7 @@ import Contact from "./components/Contact";
 // 프레이머모션
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import TeamProject from "./components/TeamProject";
 
 export default function App() {
   const projectArr = ["clone", "team project"];
@@ -94,18 +95,19 @@ export default function App() {
         spaceBetween={30}
         mousewheel={true}
         modules={[Mousewheel]}
-        className="mySwiper z-10 md:h-full "
+        className="mySwiper z-10 md:h-full  "
       >
-        <SwiperSlide>
+        <SwiperSlide className="">
+          <div className="">
           <div className="relative mt-[10%] ">
             <img
               src="/images/hyunjimain.png"
-              className="w-[500px] h-[400px] mx-auto "
+              className="w-[500px] absolute left-[50%] translate-x-[-50%] h-[400px] mx-auto "
               alt="dd"
             ></img>
 
           </div>
-          <div className="my-auto text-center w-[50%] ml-[25%] rounded-xl py-2 bg-blue-300 bg-opacity-50 ">
+          <div className="my-auto absolute bottom-[20%] text-center w-[50%] ml-[25%] rounded-xl py-2 bg-blue-300 2xl:opacity-100 xl:opacity-100 lg:opacity-100 md:opacity-0 sm:opacity-0 bg-opacity-50 ">
             <h2 className="text-5xl  text-white drop-shadow-xl font-nm h-16 my-11 ">
               {text1}
             </h2>
@@ -115,10 +117,11 @@ export default function App() {
           </div>
           {/* <img src="/images/7.png" className="ml-[38%] mt-[-10%] w-[400px]" alt="hyunji"></img> */}
           <div className="ml-[32%]"></div>
+          </div>
         </SwiperSlide>
 
         <SwiperSlide>
-          <div className="bg-gray-100 w-[80vw] h-[70vh] mx-auto my-[9%] bg-opacity-70 rounded-lg ">
+          <div className="bg-gray-100 relative w-[80vw]  h-[70vh] mx-auto my-[9%] bg-opacity-70 rounded-lg ">
             <div className="text-center text-6xl pt-[45px] font-bold ">
               About
             </div>
@@ -153,7 +156,7 @@ export default function App() {
                 </p>
               </div>
             </div>
-            <div className="grid grid-cols-3 divide-x-2 divide-dotted divide-slate-300 bg-white shadow-xl rounded-xl px-4 mx-9 mt-[80px] h-[19vh] ">
+            <div className="grid absolute bottom-14 left-[50%] translate-x-[-50%] pb-[10%] 2xl:overflow-hidden md:overflow-y-scroll sm:overflow-y-scroll grid-cols-3 divide-x-2 divide-dotted divide-slate-300 bg-white shadow-xl rounded-xl w-[80%] mx-9 mt-[80px] h-[10vh] ">
               <div className="mt-9 ">
                 <p className="flex font-semibold">
                   <CgProfile className="my-auto mx-1" />
@@ -197,11 +200,11 @@ export default function App() {
         </SwiperSlide>
         <SwiperSlide>
           {" "}
-          <div className="bg-gray-100 w-[80vw] h-[70vh] mx-auto my-[9%]  bg-opacity-80 rounded-lg ">
-            <div className="text-center text-6xl pt-[40px] font-bold ">
+          <div className="bg-gray-100 relative w-[80vw] h-[70vh] mx-auto my-[9%]  bg-opacity-80 rounded-lg ">
+            <div className="text-center text-6xl pt-[40px] pb-[15%] font-bold ">
               SKILL
             </div>
-            <div className="relative 2xl:pt-[210px]  xl:pt-[250px] lg:pt-[210px]  md:pt-[210px]  sm:pt-[210px] px-[70px] ml-[2%]">
+            <div className="px-9">
               <Swiper
                 cssMode={true}
                 slidesPerView={5}
@@ -460,8 +463,9 @@ export default function App() {
         </SwiperSlide>
         <SwiperSlide>
           {" "}
-          <div className="bg-gray-100 w-[80vw] h-[70vh] mx-auto my-[9%] overflow-hidden bg-opacity-80 rounded-lg flex ">
-            <div className="flex gap-5 justify-end absolute left-[42%] my-7 ">
+          <div className="bg-gray-100 w-[80vw] relative h-[70vh] mx-auto my-[9%] overflow-y-scroll bg-opacity-80 rounded-lg flex ">
+            <div className="flex gap-5 
+             absolute left-[50%] translate-x-[-50%] my-7 ">
               <button
                 className={`text-3xl font-semibold text-black rounded-3xl p-2 ${filtered === "clone" && "bg-pink-300 border-pink-300 border-2 text-white"
                   }`}
@@ -727,8 +731,9 @@ export default function App() {
               </div>
             )}
             {filtered === "team project" && (
-              <div className=" mx-auto 2xl:my-[200px] xl:my-[200px] lg:my-[100px] sm:my-[80px] xs:my-[100px] ">
-                <div className="2xl:flex xl:flex my-7">
+              <div className="mx-auto"> 
+                <div className=" mx-auto 2xl:my-[200px] xl:my-[200px] lg:my-[100px] sm:my-[80px] xs:my-[100px] ">
+                <div className="2xl:flex xl:flex">
                   <div className="md:flex sm:flex 2xl:gap-0 xl:gap-0 md:gap-32 sm:gap-32">
                     <div className="mx-5 ">
                       {" "}
@@ -876,7 +881,7 @@ export default function App() {
                         {modalVisible3 && (
                           <motion.div
                             className={`bg-blue-100 overflow-hidden rounded-lg absolute top-[-15px] p-4 left-[-9px] 2xl:w-[17vw] xl:w-[17vw] md:w-[25vw] sm:w-[25vw] opacity-1 2xl:h-[31vh] xl:h-[31vh] md:h-[23vh] sm:h-[23vh] 
-                          `}
+                       `}
                           >
                             <p className="text-center my-2 mt-5 font-bold text-3xl">
                               {" "}
@@ -951,7 +956,7 @@ export default function App() {
                             </p>
                             <p className="my-4 text-xs text-center ">
                               프론트엔드 5명, 백엔드 4명 구성의 팀으로 진행한
-                              요기요 딜리버리 구현 배달 서비스 프로젝트입니다.
+                             고3학생 체력 단련 어플리케이션 구현 서비스 프로젝트입니다.
                             </p>
                             <p className="text-sm my-3 font-bold">기술 스택</p>
                             <p className="text-xs text-gray-600 ">
@@ -990,7 +995,7 @@ export default function App() {
                       </div>
                     </div>
                   </div>
-                </div></div>
+                </div></div></div>
             )}
 
             <div></div>

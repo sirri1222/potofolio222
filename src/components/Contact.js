@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 const Contact = () => {
   return (
-    <div className="flex fixed ml-[40%] gap-5 z-50 my-7">
+    <div className="flex fixed ml-[50%] translate-x-[-50%] gap-5 z-50 my-7">
       <div>
         {/* <a href="https://github.com/sirri1222?tab=repositories" target="_blank" alt="dd" >dd </a> */}
         <AiOutlineGithub
