@@ -99,24 +99,24 @@ export default function App() {
       >
         <SwiperSlide className="">
           <div className="">
-          <div className="relative mt-[10%] ">
-            <img
-              src="/images/hyunjimain.png"
-              className="w-[500px] absolute left-[50%] translate-x-[-50%] h-[400px] mx-auto "
-              alt="dd"
-            ></img>
+            <div className="relative mt-[10%] ">
+              <img
+                src="/images/hyunjimain.png"
+                className="w-[500px] absolute left-[50%] translate-x-[-50%] h-[400px] mx-auto "
+                alt="dd"
+              ></img>
 
-          </div>
-          <div className="my-auto absolute bottom-[20%] text-center w-[50%] ml-[25%] rounded-xl py-2 bg-blue-300 2xl:opacity-100 xl:opacity-100 lg:opacity-100 md:opacity-0 sm:opacity-0 bg-opacity-50 ">
-            <h2 className="text-5xl  text-white drop-shadow-xl font-nm h-16 my-11 ">
-              {text1}
-            </h2>
-            <h2 className="text-5xl text-white drop-shadow-xl  font-nm h-16 my-11 ">
-              {text2}
-            </h2>
-          </div>
-          {/* <img src="/images/7.png" className="ml-[38%] mt-[-10%] w-[400px]" alt="hyunji"></img> */}
-          <div className="ml-[32%]"></div>
+            </div>
+            <div className="my-auto absolute bottom-[20%] text-center w-[50%] ml-[25%] rounded-xl py-2 bg-blue-300 2xl:opacity-100 xl:opacity-100 lg:opacity-100 md:opacity-0 sm:opacity-0 bg-opacity-50 ">
+              <h2 className="text-5xl  text-white drop-shadow-xl font-nm h-16 my-11 ">
+                {text1}
+              </h2>
+              <h2 className="text-5xl text-white drop-shadow-xl  font-nm h-16 my-11 ">
+                {text2}
+              </h2>
+            </div>
+            {/* <img src="/images/7.png" className="ml-[38%] mt-[-10%] w-[400px]" alt="hyunji"></img> */}
+            <div className="ml-[32%]"></div>
           </div>
         </SwiperSlide>
 
@@ -494,10 +494,11 @@ export default function App() {
                       <h2 className=" text-3xl font-bold mt-[16%] ">
                         STX 건설
                       </h2>
-                      <p className="my-3">2022. 11. 08 ~ 2022. 11. 21 </p>
-                      <p>사용 프로그램 : HTML, CSS, JavaScript</p>
+                      <div className="2xl:text-sm xl:text-sm md:text-xs sm:text-xs">
+                        <p className="my-3">2022. 11. 08 ~ 2022. 11. 21 </p>
+                        <p>사용 프로그램 : HTML, CSS, JavaScript</p></div>
                     </div>
-                    <div className="flex absolute bottom-7 left-[50%] translate-x-[-50%] justify-center gap-4 items-center text-xl text-black">
+                    <div className="flex absolute xl:bottom-7 2xl:bottom-7 left-[50%] translate-x-[-50%] justify-center gap-4 items-center text-xl text-black">
                       <button
                         onClick={() =>
                           window.open(
@@ -544,9 +545,10 @@ export default function App() {
                       <h2 className=" text-3xl font-bold  mt-[16%] ">
                         한살림 장보기
                       </h2>
-                      <p className="my-3">2022. 11. 09 ~ 2022. 12. 21 </p>
-                      <p>사용 프로그램 : HTML, CSS, JavaScript</p>
-
+                      <div className="2xl:text-sm xl:text-sm md:text-xs sm:text-xs">
+                        <p className="my-3">2022. 11. 09 ~ 2022. 12. 21 </p>
+                        <p>사용 프로그램 : HTML, CSS, JavaScript</p>
+                      </div>
                     </div>
                     <div className="flex absolute bottom-7 left-[50%] translate-x-[-50%] justify-center gap-4 items-center text-xl text-black hover:opacity-100">
                       <button
@@ -594,8 +596,11 @@ export default function App() {
                       <h2 className=" text-3xl font-bold mt-[16%] ">
                         도시락통
                       </h2>
-                      <p className="my-3">2022. 12. 01 ~ 2023. 01. 25 </p>
-                      <p>사용 기술 : HTML, CSS, JavaScript, AOS Swiper.js</p>
+                      <div className="2xl:text-sm xl:text-sm md:text-xs sm:text-xs">
+                        <p className="my-3">2022. 12. 01 ~ 2023. 01. 25 </p>
+                        <p>사용 기술 : HTML, CSS, JavaScript, AOS Swiper.js</p>
+                        </div>
+
                     </div>
                     <div className="flex absolute bottom-7 left-[50%] translate-x-[-50%] justify-center gap-4 items-center text-xl text-black">
                       <button
@@ -642,11 +647,14 @@ export default function App() {
                       <h2 className=" text-3xl font-bold  mt-[14%] ">
                         현대그룹
                       </h2>
-                      <p className="my-3">2023. 02. 27 ~ 2022. 03. 15 </p>
+                      <div className="2xl:text-sm xl:text-sm md:text-xs sm:text-xs">
+                         <p className="my-3">2023. 02. 27 ~ 2022. 03. 15 </p>
                       <p>
                         사용 기술 : HTML, CSS, JavaScript, AOS, Anime.js,
                         Swiper.js
                       </p>
+                      </div>
+                     
                     </div>
                     <div className="flex absolute bottom-7 left-[50%] translate-x-[-50%] justify-center gap-4 items-center text-xl text-black">
                       <button
@@ -691,8 +699,11 @@ export default function App() {
                       <h2 className=" text-3xl font-bold  mt-[16%] ">
                         원더플레이스
                       </h2>
-                      <p className="my-3">2022. 11. 08 ~ 2022. 11. 21 </p>
+                      <div className="2xl:text-sm xl:text-sm md:text-xs sm:text-xs">
+                         <p className="my-3">2022. 11. 08 ~ 2022. 11. 21 </p>
                       <p>사용 프로그램 : HTML, CSS, JavaScript</p>
+                      </div>
+                     
                     </div>
                     <div className="flex absolute bottom-7 left-[50%] translate-x-[-50%] justify-center gap-4 items-center text-xl text-black">
                       <button
@@ -731,271 +742,271 @@ export default function App() {
               </div>
             )}
             {filtered === "team project" && (
-              <div className="mx-auto"> 
+              <div className="mx-auto">
                 <div className=" mx-auto 2xl:my-[200px] xl:my-[200px] lg:my-[100px] sm:my-[80px] xs:my-[100px] ">
-                <div className="2xl:flex xl:flex">
-                  <div className="md:flex sm:flex 2xl:gap-0 xl:gap-0 md:gap-32 sm:gap-32">
-                    <div className="mx-5 ">
-                      {" "}
-                      <button onClick={openHandler}>
-                        <MdOutlineArrowDropDownCircle className="text-black" />
-                      </button>
-                      <div className="relative flex flex-col justify-center w-[16vw] 2xl:h-[30vh] xl:h-[30vh] md:h-[22vh] sm:h-[22vh]  border-black border-8 border-black">
-                        <div className="flex justify-center items-center  ">
-                          {modalVisible && (
-                            <motion.div className="bg-blue-100 overflow-hidden rounded-lg 2xl:h-[31vh] xl:h-[31vh] md:h-[23vh] sm:h-[23vh] absolute top-[-15px] p-4 left-[-9px] 2xl:w-[17vw] xl:w-[17vw] md:w-[25vw] sm:w-[25vw] ">
+                  <div className="2xl:flex xl:flex">
+                    <div className="md:flex sm:flex 2xl:gap-0 xl:gap-0 md:gap-32 sm:gap-32">
+                      <div className="mx-5 ">
+                        {" "}
+                        <button onClick={openHandler}>
+                          <MdOutlineArrowDropDownCircle className="text-black" />
+                        </button>
+                        <div className="relative flex flex-col justify-center w-[16vw] 2xl:h-[30vh] xl:h-[30vh] md:h-[22vh] sm:h-[22vh]  border-black border-8 border-black">
+                          <div className="flex justify-center items-center  ">
+                            {modalVisible && (
+                              <motion.div className="bg-blue-100 overflow-hidden rounded-lg 2xl:h-[31vh] xl:h-[31vh] md:h-[23vh] sm:h-[23vh] absolute top-[-15px] p-4 left-[-9px] 2xl:w-[17vw] xl:w-[17vw] md:w-[25vw] sm:w-[25vw] ">
+                                <p className="text-center my-2 mt-5 font-bold text-3xl">
+                                  kyobo
+                                </p>
+                                <p className="text-xs text-center mb-7">
+                                  2023.01.11 ~ 2023.02.05
+                                </p>
+                                <p className="my-4 text-xs text-center  ">
+                                  프론트엔드 3명, 백엔드 4명 구성의 팀으로 진행한
+                                  요기요 딜리버리 구현 배달 서비스 프로젝트입니다.
+                                </p>
+                                <p className="text-sm my-3 font-bold">기술 스택</p>
+                                <p className="text-xs text-gray-600 ">
+                                  React.js, JavaScript, Redux Toolkit, Axios,
+                                  Tailwind CSS
+                                </p>
+                                <p className="text-sm  my-3 font-bold">
+                                  구현한 기능
+                                </p>
+                                <p className="text-xs text-gray-600">
+                                  메뉴, 카테고리
+                                </p>
+                              </motion.div>
+                            )}
+                            <p className="px-[80px] nowrap text-center text-black font-bold text-xl">
+                              kyobo
+                            </p>
+                          </div>
+                          <img
+                            className="mx-auto w-[20vw] h-[20vh] hover:scale-110 transition-transform ease-in-out duration-500"
+                            src="/images/kyoborbg.png"
+                            alt="JUSTDOEAT"
+                          ></img>
+                        </div>
+                        <div className="flex justify-center items-center text-5xl gap-5 my-2">
+                          <button onClick={() => alert("동영상이 없습니다.")}>
+                            <FaVideo className="text-black" />
+                          </button>
+                          <button>
+                            {" "}
+                            <RiGithubLine
+                              className="text-black"
+                              onClick={() =>
+                                window.open(
+                                  "https://github.com/sirri1222/kyobo-1",
+                                  "_blank"
+                                )
+                              }
+                            />
+                          </button>
+                        </div>
+                      </div>
+
+                      <div className="mx-5">
+                        {" "}
+                        <button onClick={openHandler2}>
+                          <MdOutlineArrowDropDownCircle className="text-black" />
+                        </button>
+                        <div className="relative flex flex-col justify-center w-[16vw] 2xl:h-[30vh] xl:h-[30vh] md:h-[22vh] sm:h-[22vh] border-8 border-black ">
+                          <div className="flex justify-center items-center ">
+                            <p className="px-[80px] nowrap text-center font-bold text-xl text-black">
+                              JUST DO EAT
+                            </p>
+                          </div>
+                          <img
+                            className="mx-auto w-[20vw] h-[20vh] hover:scale-110 transition-transform ease-in-out duration-500"
+                            src="/images/cookierbg.png"
+                            alt="JUSTDOEAT"
+                          ></img>
+                          {modalVisible2 && (
+                            <motion.div className="bg-blue-100 overflow-hidden rounded-lg absolute top-[-15px] p-4 left-[-9px] 2xl:w-[17vw] xl:w-[17vw] md:w-[25vw] sm:w-[25vw] 2xl:h-[31vh] xl:h-[31vh] md:h-[23vh] sm:h-[23vh] opacity-100 ">
                               <p className="text-center my-2 mt-5 font-bold text-3xl">
-                                kyobo
+                                {" "}
+                                JUST DO EAT
                               </p>
                               <p className="text-xs text-center mb-7">
                                 2023.01.11 ~ 2023.02.05
                               </p>
-                              <p className="my-4 text-xs text-center  ">
+                              <p className="my-4 text-xs text-center ">
                                 프론트엔드 3명, 백엔드 4명 구성의 팀으로 진행한
                                 요기요 딜리버리 구현 배달 서비스 프로젝트입니다.
                               </p>
                               <p className="text-sm my-3 font-bold">기술 스택</p>
                               <p className="text-xs text-gray-600 ">
                                 React.js, JavaScript, Redux Toolkit, Axios,
-                                Tailwind CSS
+                                Tailwind, styled-component CSS
                               </p>
-                              <p className="text-sm  my-3 font-bold">
-                                구현한 기능
-                              </p>
+                              <p className="text-sm  my-3 font-bold">구현한 기능</p>
                               <p className="text-xs text-gray-600">
-                                메뉴, 카테고리
+                                메뉴, 카테고리, 장바구니, 주문하기
                               </p>
                             </motion.div>
                           )}
-                          <p className="px-[80px] nowrap text-center text-black font-bold text-xl">
-                            kyobo
-                          </p>
                         </div>
-                        <img
-                          className="mx-auto w-[20vw] h-[20vh] hover:scale-110 transition-transform ease-in-out duration-500"
-                          src="/images/kyoborbg.png"
-                          alt="JUSTDOEAT"
-                        ></img>
-                      </div>
-                      <div className="flex justify-center items-center text-5xl gap-5 my-2">
-                        <button onClick={() => alert("동영상이 없습니다.")}>
-                          <FaVideo className="text-black" />
-                        </button>
-                        <button>
-                          {" "}
-                          <RiGithubLine
-                            className="text-black"
-                            onClick={() =>
-                              window.open(
-                                "https://github.com/sirri1222/kyobo-1",
-                                "_blank"
-                              )
-                            }
-                          />
-                        </button>
-                      </div>
-                    </div>
 
-                    <div className="mx-5">
-                      {" "}
-                      <button onClick={openHandler2}>
-                        <MdOutlineArrowDropDownCircle className="text-black" />
-                      </button>
-                      <div className="relative flex flex-col justify-center w-[16vw] 2xl:h-[30vh] xl:h-[30vh] md:h-[22vh] sm:h-[22vh] border-8 border-black ">
-                        <div className="flex justify-center items-center ">
-                          <p className="px-[80px] nowrap text-center font-bold text-xl text-black">
-                            JUST DO EAT
-                          </p>
-                        </div>
-                        <img
-                          className="mx-auto w-[20vw] h-[20vh] hover:scale-110 transition-transform ease-in-out duration-500"
-                          src="/images/cookierbg.png"
-                          alt="JUSTDOEAT"
-                        ></img>
-                        {modalVisible2 && (
-                          <motion.div className="bg-blue-100 overflow-hidden rounded-lg absolute top-[-15px] p-4 left-[-9px] 2xl:w-[17vw] xl:w-[17vw] md:w-[25vw] sm:w-[25vw] 2xl:h-[31vh] xl:h-[31vh] md:h-[23vh] sm:h-[23vh] opacity-100 ">
-                            <p className="text-center my-2 mt-5 font-bold text-3xl">
-                              {" "}
-                              JUST DO EAT
-                            </p>
-                            <p className="text-xs text-center mb-7">
-                              2023.01.11 ~ 2023.02.05
-                            </p>
-                            <p className="my-4 text-xs text-center ">
-                              프론트엔드 3명, 백엔드 4명 구성의 팀으로 진행한
-                              요기요 딜리버리 구현 배달 서비스 프로젝트입니다.
-                            </p>
-                            <p className="text-sm my-3 font-bold">기술 스택</p>
-                            <p className="text-xs text-gray-600 ">
-                              React.js, JavaScript, Redux Toolkit, Axios,
-                              Tailwind, styled-component CSS
-                            </p>
-                            <p className="text-sm  my-3 font-bold">구현한 기능</p>
-                            <p className="text-xs text-gray-600">
-                              메뉴, 카테고리, 장바구니, 주문하기
-                            </p>
-                          </motion.div>
-                        )}
-                      </div>
-
-                      <div className="flex justify-center items-center text-5xl gap-5 my-2">
-                        <button
-                          onClick={() =>
-                            window.open("https://youtu.be/3vGqb2JfWGo", "_blank")
-                          }
-                        >
-                          <FaVideo className="text-black" />
-                        </button>
-                        <button>
-                          {" "}
-                          <RiGithubLine
-                            className="text-black"
+                        <div className="flex justify-center items-center text-5xl gap-5 my-2">
+                          <button
                             onClick={() =>
-                              window.open(
-                                "https://github.com/sirri1222/JUSTDOEAT",
-                                "_blank"
-                              )
+                              window.open("https://youtu.be/3vGqb2JfWGo", "_blank")
                             }
-                          />
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="md:flex sm:flex 2xl:gap-0 xl:gap-0 md:gap-32 sm:gap-32 ">
-                    <div className="mx-5">
-                      {" "}
-                      <button onClick={openHandler3}>
-                        <MdOutlineArrowDropDownCircle className="text-black" />
-                      </button>
-                      <div className="relative flex flex-col justify-center w-[16vw] 2xl:h-[30vh] xl:h-[30vh] md:h-[22vh] sm:h-[22vh] border-8 border-black">
-                        <div className="flex justify-center items-center ">
-                          <p className="px-[80px] nowrap text-center text-black font-bold text-xl">
-                            Bon Voyage
-                          </p>
-                        </div>
-                        <img
-                          className="mx-auto w-[20vw] h-[20vh] hover:scale-110 transition-transform ease-in-out duration-500"
-                          src="/images/travelrbg.png"
-                          alt="JUSTDOEAT"
-                        ></img>
-                        {modalVisible3 && (
-                          <motion.div
-                            className={`bg-blue-100 overflow-hidden rounded-lg absolute top-[-15px] p-4 left-[-9px] 2xl:w-[17vw] xl:w-[17vw] md:w-[25vw] sm:w-[25vw] opacity-1 2xl:h-[31vh] xl:h-[31vh] md:h-[23vh] sm:h-[23vh] 
-                       `}
                           >
-                            <p className="text-center my-2 mt-5 font-bold text-3xl">
-                              {" "}
+                            <FaVideo className="text-black" />
+                          </button>
+                          <button>
+                            {" "}
+                            <RiGithubLine
+                              className="text-black"
+                              onClick={() =>
+                                window.open(
+                                  "https://github.com/sirri1222/JUSTDOEAT",
+                                  "_blank"
+                                )
+                              }
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="md:flex sm:flex 2xl:gap-0 xl:gap-0 md:gap-32 sm:gap-32 ">
+                      <div className="mx-5">
+                        {" "}
+                        <button onClick={openHandler3}>
+                          <MdOutlineArrowDropDownCircle className="text-black" />
+                        </button>
+                        <div className="relative flex flex-col justify-center w-[16vw] 2xl:h-[30vh] xl:h-[30vh] md:h-[22vh] sm:h-[22vh] border-8 border-black">
+                          <div className="flex justify-center items-center ">
+                            <p className="px-[80px] nowrap text-center text-black font-bold text-xl">
                               Bon Voyage
                             </p>
-                            <p className="text-xs text-center mb-7">
-                              2023.02.07 ~ 2023.03.03
-                            </p>
-                            <p className="my-4 text-xs text-center ">
-                              프론트엔드 3명, 백엔드 4명 구성의 팀으로 진행한
-                              국내여행 스케줄러 구현 플래너 서비스 프로젝트입니다.
-                            </p>
-                            <p className="text-sm my-3 font-bold">기술 스택</p>
-                            <p className="text-xs text-gray-600 ">
-                              React.js, JavaScript, Redux Toolkit, Axios, Tailwind
-                              CSS
-                            </p>
-                            <p className="text-sm  my-3 font-bold">구현한 기능</p>
-                            <p className="text-xs text-gray-600">
-                              로그인,여행지검색, 카테고리, 카카오지도
-                              API,여행스케줄 생성,마이페이지
-                            </p>
-                          </motion.div>
-                        )}
-                      </div>
-                      <div className="flex justify-center items-center text-5xl gap-5 my-2">
-                        <button
-                          onClick={() =>
-                            window.open("https://youtu.be/ePmlGtwn984", "_blank")
-                          }
-                        >
-                          <FaVideo className="text-black" />
-                        </button>
-                        <button>
-                          {" "}
-                          <RiGithubLine
-                            className="text-black"
-                            onClick={() =>
-                              window.open(
-                                "https://github.com/sirri1222/Bon-voyage",
-                                "_blank"
-                              )
-                            }
-                          />
-                        </button>
-                      </div>
-                    </div>
-
-                    <div className="mx-5">
-                      {" "}
-                      <button onClick={openHandler4}>
-                        <MdOutlineArrowDropDownCircle className="text-black" />
-                      </button>
-                      <div className="relative flex flex-col justify-center w-[16vw] 2xl:h-[30vh] xl:h-[30vh] md:h-[22vh] sm:h-[22vh] border-8 border-black">
-                        <div className="flex justify-center items-center ">
-                          <p className="px-[80px] text-black nowrap text-center font-bold text-xl">
-                            Schoolfitness
-                          </p>
+                          </div>
+                          <img
+                            className="mx-auto w-[20vw] h-[20vh] hover:scale-110 transition-transform ease-in-out duration-500"
+                            src="/images/travelrbg.png"
+                            alt="JUSTDOEAT"
+                          ></img>
+                          {modalVisible3 && (
+                            <motion.div
+                              className={`bg-blue-100 overflow-hidden rounded-lg absolute top-[-15px] p-4 left-[-9px] 2xl:w-[17vw] xl:w-[17vw] md:w-[25vw] sm:w-[25vw] opacity-1 2xl:h-[31vh] xl:h-[31vh] md:h-[23vh] sm:h-[23vh] 
+                       `}
+                            >
+                              <p className="text-center my-2 mt-5 font-bold text-3xl">
+                                {" "}
+                                Bon Voyage
+                              </p>
+                              <p className="text-xs text-center mb-7">
+                                2023.02.07 ~ 2023.03.03
+                              </p>
+                              <p className="my-4 text-xs text-center ">
+                                프론트엔드 3명, 백엔드 4명 구성의 팀으로 진행한
+                                국내여행 스케줄러 구현 플래너 서비스 프로젝트입니다.
+                              </p>
+                              <p className="text-sm my-3 font-bold">기술 스택</p>
+                              <p className="text-xs text-gray-600 ">
+                                React.js, JavaScript, Redux Toolkit, Axios, Tailwind
+                                CSS
+                              </p>
+                              <p className="text-sm  my-3 font-bold">구현한 기능</p>
+                              <p className="text-xs text-gray-600">
+                                로그인,여행지검색, 카테고리, 카카오지도
+                                API,여행스케줄 생성,마이페이지
+                              </p>
+                            </motion.div>
+                          )}
                         </div>
-                        <img
-                          className="mx-auto w-[20vw] h-[20vh] hover:scale-110 transition-transform ease-in-out duration-500"
-                          src="/images/fitrbg.png"
-                          alt="JUSTDOEAT"
-                        ></img>
-                        {modalVisible4 && (
-                          <motion.div className="bg-blue-100 overflow-hidden rounded-lg absolute top-[-15px] p-4 left-[-9px] 2xl:w-[17vw] xl:w-[17vw] md:w-[25vw] sm:w-[25vw] 2xl:h-[31vh] xl:h-[31vh] md:h-[23vh] sm:h-[23vh] opacity-100">
-                            <p className="text-center my-2 mt-5 font-bold text-3xl">
+                        <div className="flex justify-center items-center text-5xl gap-5 my-2">
+                          <button
+                            onClick={() =>
+                              window.open("https://youtu.be/ePmlGtwn984", "_blank")
+                            }
+                          >
+                            <FaVideo className="text-black" />
+                          </button>
+                          <button>
+                            {" "}
+                            <RiGithubLine
+                              className="text-black"
+                              onClick={() =>
+                                window.open(
+                                  "https://github.com/sirri1222/Bon-voyage",
+                                  "_blank"
+                                )
+                              }
+                            />
+                          </button>
+                        </div>
+                      </div>
+
+                      <div className="mx-5">
+                        {" "}
+                        <button onClick={openHandler4}>
+                          <MdOutlineArrowDropDownCircle className="text-black" />
+                        </button>
+                        <div className="relative flex flex-col justify-center w-[16vw] 2xl:h-[30vh] xl:h-[30vh] md:h-[22vh] sm:h-[22vh] border-8 border-black">
+                          <div className="flex justify-center items-center ">
+                            <p className="px-[80px] text-black nowrap text-center font-bold text-xl">
                               Schoolfitness
                             </p>
-                            <p className="text-xs text-center mb-7">
-                              2023.03.06 ~ 2023.04.04
-                            </p>
-                            <p className="my-4 text-xs text-center ">
-                              프론트엔드 5명, 백엔드 4명 구성의 팀으로 진행한
-                             고3학생 체력 단련 어플리케이션 구현 서비스 프로젝트입니다.
-                            </p>
-                            <p className="text-sm my-3 font-bold">기술 스택</p>
-                            <p className="text-xs text-gray-600 ">
-                              React.js, TypeScript, recoil, Axios, Tailwind CSS, styled components
-                            </p>
-                            <p className="text-sm  my-3 font-bold">구현한 기능</p>
-                            <p className="text-xs text-gray-600">
-                              메인페이지, 헬스리포트, 게임, 마이스탬프, 더보기
-                            </p>
-                          </motion.div>
-                        )}
-                      </div>
-                      <div className="flex justify-center items-center text-5xl gap-5 my-2">
-                        <button
-                          onClick={() =>
-                            window.open(
-                              "https://www.youtube.com/watch?v=hLS2y7jnayA&t=35s",
-                              "_blank"
-                            )
-                          }
-                        >
-                          <FaVideo className="text-black" />
-                        </button>
-                        <button>
-                          {" "}
-                          <RiGithubLine
-                            className="text-black"
+                          </div>
+                          <img
+                            className="mx-auto w-[20vw] h-[20vh] hover:scale-110 transition-transform ease-in-out duration-500"
+                            src="/images/fitrbg.png"
+                            alt="JUSTDOEAT"
+                          ></img>
+                          {modalVisible4 && (
+                            <motion.div className="bg-blue-100 overflow-hidden rounded-lg absolute top-[-15px] p-4 left-[-9px] 2xl:w-[17vw] xl:w-[17vw] md:w-[25vw] sm:w-[25vw] 2xl:h-[31vh] xl:h-[31vh] md:h-[23vh] sm:h-[23vh] opacity-100">
+                              <p className="text-center my-2 mt-5 font-bold text-3xl">
+                                Schoolfitness
+                              </p>
+                              <p className="text-xs text-center mb-7">
+                                2023.03.06 ~ 2023.04.04
+                              </p>
+                              <p className="my-4 text-xs text-center ">
+                                프론트엔드 5명, 백엔드 4명 구성의 팀으로 진행한
+                                고3학생 체력 단련 어플리케이션 구현 서비스 프로젝트입니다.
+                              </p>
+                              <p className="text-sm my-3 font-bold">기술 스택</p>
+                              <p className="text-xs text-gray-600 ">
+                                React.js, TypeScript, recoil, Axios, Tailwind CSS, styled components
+                              </p>
+                              <p className="text-sm  my-3 font-bold">구현한 기능</p>
+                              <p className="text-xs text-gray-600">
+                                메인페이지, 헬스리포트, 게임, 마이스탬프, 더보기
+                              </p>
+                            </motion.div>
+                          )}
+                        </div>
+                        <div className="flex justify-center items-center text-5xl gap-5 my-2">
+                          <button
                             onClick={() =>
                               window.open(
-                                "https://github.com/sirri1222/schoolfitness",
+                                "https://www.youtube.com/watch?v=hLS2y7jnayA&t=35s",
                                 "_blank"
                               )
                             }
-                          />
-                        </button>
+                          >
+                            <FaVideo className="text-black" />
+                          </button>
+                          <button>
+                            {" "}
+                            <RiGithubLine
+                              className="text-black"
+                              onClick={() =>
+                                window.open(
+                                  "https://github.com/sirri1222/schoolfitness",
+                                  "_blank"
+                                )
+                              }
+                            />
+                          </button>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div></div></div>
+                  </div></div></div>
             )}
 
             <div></div>
