@@ -463,7 +463,7 @@ export default function App() {
         </SwiperSlide>
         <SwiperSlide>
           {" "}
-          <div className="bg-gray-100 w-[80vw] relative h-[70vh] mx-auto my-[9%] overflow-y-scroll bg-opacity-80 rounded-lg flex ">
+          <div className="bg-gray-100 w-[80vw] relative h-[70vh] mx-auto my-[9%] 2xl:overflow-hidden xl:overflow-hidden md:overflow-y-scroll sm:overflow-y-scroll bg-opacity-80 rounded-lg flex ">
             <div className="flex gap-5 
              absolute left-[50%] translate-x-[-50%] my-7 ">
               <button
@@ -550,7 +550,7 @@ export default function App() {
                         <p>사용 프로그램 : HTML, CSS, JavaScript</p>
                       </div>
                     </div>
-                    <div className="flex absolute bottom-7 left-[50%] translate-x-[-50%] justify-center gap-4 items-center text-xl text-black hover:opacity-100">
+                    <div className="flex absolute  xl:bottom-7 2xl:bottom-7 left-[50%] translate-x-[-50%] justify-center gap-4 items-center text-xl text-black hover:opacity-100">
                       <button
                         onClick={() =>
                           window.open(
@@ -602,7 +602,7 @@ export default function App() {
                         </div>
 
                     </div>
-                    <div className="flex absolute bottom-7 left-[50%] translate-x-[-50%] justify-center gap-4 items-center text-xl text-black">
+                    <div className="flex absolute xl:bottom-7 2xl:bottom-7 left-[50%] translate-x-[-50%] justify-center gap-4 items-center text-xl text-black">
                       <button
                         onClick={() =>
                           window.open(
@@ -656,7 +656,7 @@ export default function App() {
                       </div>
                      
                     </div>
-                    <div className="flex absolute bottom-7 left-[50%] translate-x-[-50%] justify-center gap-4 items-center text-xl text-black">
+                    <div className="flex absolute  xl:bottom-7 2xl:bottom-7 left-[50%] translate-x-[-50%] justify-center gap-4 items-center text-xl text-black">
                       <button
                         onClick={() =>
                           window.open("https://www.hyundaigroup.com/", "_blank")
@@ -705,7 +705,7 @@ export default function App() {
                       </div>
                      
                     </div>
-                    <div className="flex absolute bottom-7 left-[50%] translate-x-[-50%] justify-center gap-4 items-center text-xl text-black">
+                    <div className="flex absolute xl:bottom-7 2xl:bottom-7 left-[50%] translate-x-[-50%] justify-center gap-4 items-center text-xl text-black">
                       <button
                         onClick={() =>
                           window.open(
