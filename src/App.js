@@ -31,6 +31,7 @@ import Contact from "./components/Contact";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import TeamProject from "./components/TeamProject";
+import { useMediaQuery } from "react-responsive";
 
 export default function App() {
   const projectArr = ["clone", "team project"];
@@ -46,7 +47,16 @@ export default function App() {
   const [modalVisible2, setModalVisible2] = useState(true);
   const [modalVisible3, setModalVisible3] = useState(true);
   const [modalVisible4, setModalVisible4] = useState(true);
-
+// 반응형 훅
+const isPc = useMediaQuery({
+  query : "(min-width:1024px)"
+});
+const isTablet = useMediaQuery({
+  query : "(min-width:768px) and (max-width:1023px)"
+});
+const isMobile = useMediaQuery({
+  query : "(max-width:767px)"
+});
   // 한글자씩 나타내기
 
   const [text1, setText1] = useState("");
@@ -86,8 +96,8 @@ export default function App() {
     };
   }, [count]);
   return (
-    <>
-      <Background />
+   <>
+     {isPc && <div><Background />
       <Contact />
       <Swiper
         direction={"vertical"}
@@ -1105,7 +1115,9 @@ export default function App() {
           </div>{" "}
         </SwiperSlide>
       </Swiper>
-      <Footer />
+      <Footer /></div> }
+      {isTablet && <div>tablet</div>}
+      {isMobile && <div>mobile</div>}
     </>
   );
 }
