@@ -13,7 +13,7 @@ const Contact = () => {
           className="cursor-pointer xl:text-7xl sm:text-5xl"
           onClick={() => window.open("https://github.com/sirri1222", "_blank")}
         />
-        <span className="opacity-0 hover:opacity-1">깃허브</span>
+        
       </div>
       <div>
         <RiKakaoTalkFill
@@ -22,7 +22,7 @@ const Contact = () => {
             window.open("https://open.kakao.com/o/ssygmvcf", "_blank")
           }
         />
-        <span className="opacity-0 hover:opacity-1">카카오톡</span>
+        
       </div>
       <div>
         <MdEmail
@@ -31,13 +31,13 @@ const Contact = () => {
         }
         className="cursor-pointer text-blue-400 xl:text-7xl sm:text-5xl" />
       
-        <span className="opacity-0 hover:opacity-1">이메일</span>
+        
       </div>
       <div>
         <RxNotionLogo
          className="cursor-pointer text-pink-400 xl:text-7xl lg:text-5xl sm:text-5xl"
-         onClick={() => window.open("https://gregarious-cello-899.notion.site/frontend-developer-792f654497bb4e65a74bedb86dafdf1a", "_blank")} />
-        <span className="opacity-0 hover:opacity-1">인스타그램</span>
+         onClick={() => window.open("https://gregarious-cello-899.notion.site/FE-ce20f3fc548747c2a2610ce0681b4332", "_blank")} />
+      
       </div>
     </div>
   );

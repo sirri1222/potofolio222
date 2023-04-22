@@ -49,10 +49,10 @@ export default function App() {
   const [modalVisible4, setModalVisible4] = useState(true);
 // 반응형 훅
 const isPc = useMediaQuery({
-  query : "(min-width:1024px)"
+  query : "(min-width:1280px)"
 });
 const isTablet = useMediaQuery({
-  query : "(min-width:768px) and (max-width:1023px)"
+  query : "(min-width:768px) and (max-width:1279px)"
 });
 const isMobile = useMediaQuery({
   query : "(max-width:767px)"
