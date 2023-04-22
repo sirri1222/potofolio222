@@ -168,7 +168,7 @@ const isMobile = useMediaQuery({
                 </p>
               </div>
             </div>
-            <div className="grid absolute bottom-14 left-[50%] translate-x-[-50%] pb-[10%] 2xl:overflow-hidden md:overflow-y-scroll sm:overflow-y-scroll grid-cols-3 divide-x-2 divide-dotted divide-slate-300 bg-white shadow-xl rounded-xl w-[80%] mx-9 mt-[80px] h-[10vh] ">
+            <div className="grid absolute bottom-14 left-[50%] translate-x-[-50%] pb-[10%] grid-cols-3 divide-x-2 divide-dotted divide-slate-300 bg-white shadow-xl rounded-xl w-[80%] mx-9 mt-[80px] h-[10vh] ">
               <div className="mt-9 ">
                 <p className="flex font-semibold">
                   <CgProfile className="my-auto mx-1" />
@@ -475,7 +475,7 @@ const isMobile = useMediaQuery({
         </SwiperSlide>
         <SwiperSlide>
           {" "}
-          <div className="bg-gray-100 w-[80vw] relative h-[70vh] mx-auto my-[9%] 2xl:overflow-hidden xl:overflow-hidden md:overflow-y-scroll sm:overflow-y-scroll bg-opacity-80 rounded-lg flex ">
+          <div className="bg-gray-100 w-[80vw] relative h-[70vh] mx-auto my-[9%]  bg-opacity-80 rounded-lg flex ">
             <div className="flex gap-5 
              absolute left-[50%] translate-x-[-50%] my-7 ">
               <button
@@ -1774,34 +1774,17 @@ const isMobile = useMediaQuery({
               </div>
             )}
             {filtered === "team project" && (
-              <div className="mx-auto">
-                <div className=" mx-auto 2xl:my-[200px] xl:my-[200px] lg:my-[100px] sm:my-[80px] xs:my-[100px] ">
-                  <div className="2xl:flex xl:flex">
-                    <div className="md:flex sm:flex 2xl:gap-0 xl:gap-0 md:gap-32 sm:gap-32">
-                      <div className="mx-5 ">
-                        {" "}
-                        <button onClick={openHandler}>
-                          <MdOutlineArrowDropDownCircle className="text-black" />
-                        </button>
-                        <div className="relative flex flex-col justify-center w-[80%]   ">
-                       
-                            {modalVisible && (
-                              <motion.div className="bg-blue-100 rounded-lg h-[20vh] overflow-hidden  ">
-                                <p className="text-center my-2 mt-5 font-bold text-3xl">
-                                  kyobo
-                                </p>
-                                <p className="text-xs text-center mb-7">
-                                  2023.01.11 ~ 2023.02.05
-                                </p>
-                                <p className="my-4 text-xs text-center  ">
-                                  프론트엔드 3명, 백엔드 4명 구성의 팀으로 진행한
-                                  요기요 딜리버리 구현 배달 서비스 프로젝트입니다.
-                                </p>
-                              
-                              
-                              </motion.div>
-                            )} <div className="flex justify-center items-center text-3xl gap-5 my-2">
-                          <button onClick={() => alert("동영상이 없습니다.")}>
+            <div className="absolute top-[25%] left-0">
+              <div className="flex justify-around">
+                <div className="bg-pink-200 text-center w-[40%] p-2 rounded-xl">
+                  <h2 className="text-xl font-bold mb-1">Kyobo</h2>
+                  <p className="text-sm"> 2023.01.11 ~ 2023.02.05</p>
+                  <p className="text-sm mt-1">  프론트엔드 3명, 백엔드 4명 구성의 팀으로 진행한
+                                요기요 딜리버리 구현 배달 서비스 프로젝트입니다.</p>
+                                <div className=" text-2xl flex justify-center gap-3 mt-2">
+                                <button
+                            onClick={() => alert("동영상 준비중입니다.")}
+                          >
                             <FaVideo className="text-black" />
                           </button>
                           <button>
@@ -1815,59 +1798,15 @@ const isMobile = useMediaQuery({
                                 )
                               }
                             />
-                          </button>
-                        </div>
-                          
-                         
-                      
-                        </div>
-                       
-                      </div>
-
-                      <div className="mx-5">
-                        {" "}
-                        <button onClick={openHandler2}>
-                          <MdOutlineArrowDropDownCircle className="text-black" />
-                        </button>
-                        <div className="relative flex flex-col justify-center w-[16vw] 2xl:h-[30vh] xl:h-[30vh] md:h-[22vh] sm:h-[22vh] border-8 border-black ">
-                          <div className="flex justify-center items-center ">
-                            <p className="px-[80px] nowrap text-center font-bold text-xl text-black">
-                              JUST DO EAT
-                            </p>
-                          </div>
-                          <img
-                            className="mx-auto w-[20vw] h-[20vh] hover:scale-110 transition-transform ease-in-out duration-500"
-                            src="/images/cookierbg.png"
-                            alt="JUSTDOEAT"
-                          ></img>
-                          {modalVisible2 && (
-                            <motion.div className="bg-blue-100 overflow-hidden rounded-lg absolute top-[-15px] p-4 left-[-9px] 2xl:w-[17vw] xl:w-[17vw] md:w-[25vw] sm:w-[25vw] 2xl:h-[31vh] xl:h-[31vh] md:h-[23vh] sm:h-[23vh] opacity-100 ">
-                              <p className="text-center my-2 mt-5 font-bold text-3xl">
-                                {" "}
-                                JUST DO EAT
-                              </p>
-                              <p className="text-xs text-center mb-7">
-                                2023.01.11 ~ 2023.02.05
-                              </p>
-                              <p className="my-4 text-xs text-center ">
-                                프론트엔드 3명, 백엔드 4명 구성의 팀으로 진행한
-                                요기요 딜리버리 구현 배달 서비스 프로젝트입니다.
-                              </p>
-                              <p className="text-sm my-3 font-bold">기술 스택</p>
-                              <p className="text-xs text-gray-600 ">
-                                React.js, JavaScript, Redux Toolkit, Axios,
-                                Tailwind, styled-component CSS
-                              </p>
-                              <p className="text-sm  my-3 font-bold">구현한 기능</p>
-                              <p className="text-xs text-gray-600">
-                                메뉴, 카테고리, 장바구니, 주문하기
-                              </p>
-                            </motion.div>
-                          )}
-                        </div>
-
-                        <div className="flex justify-center items-center text-5xl gap-5 my-2">
-                          <button
+                          </button></div>
+                </div>
+                <div className="bg-pink-200 text-center w-[40%] p-2 rounded-xl">
+                  <h2 className="text-xl font-bold mb-1">Just do eat</h2>
+                  <p className="text-sm"> 2023.01.11 ~ 2023.02.05</p>
+                  <p className="text-sm mt-1">  프론트엔드 3명, 백엔드 4명 구성의 팀으로 진행한
+                                요기요 딜리버리 구현 배달 서비스 프로젝트입니다.</p>
+                                <div className=" text-2xl flex justify-center gap-3 mt-2">
+                                <button
                             onClick={() =>
                               window.open("https://youtu.be/3vGqb2JfWGo", "_blank")
                             }
@@ -1885,63 +1824,26 @@ const isMobile = useMediaQuery({
                                 )
                               }
                             />
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="md:flex sm:flex 2xl:gap-0 xl:gap-0 md:gap-32 sm:gap-32 ">
-                      <div className="mx-5">
-                        {" "}
-                        <button onClick={openHandler3}>
-                          <MdOutlineArrowDropDownCircle className="text-black" />
-                        </button>
-                        <div className="relative flex flex-col justify-center w-[16vw] 2xl:h-[30vh] xl:h-[30vh] md:h-[22vh] sm:h-[22vh] border-8 border-black">
-                          <div className="flex justify-center items-center ">
-                            <p className="px-[80px] nowrap text-center text-black font-bold text-xl">
-                              Bon Voyage
-                            </p>
-                          </div>
-                          <img
-                            className="mx-auto w-[20vw] h-[20vh] hover:scale-110 transition-transform ease-in-out duration-500"
-                            src="/images/travelrbg.png"
-                            alt="JUSTDOEAT"
-                          ></img>
-                          {modalVisible3 && (
-                            <motion.div
-                              className={`bg-blue-100 overflow-hidden rounded-lg absolute top-[-15px] p-4 left-[-9px] 2xl:w-[17vw] xl:w-[17vw] md:w-[25vw] sm:w-[25vw] opacity-1 2xl:h-[31vh] xl:h-[31vh] md:h-[23vh] sm:h-[23vh] 
-                       `}
-                            >
-                              <p className="text-center my-2 mt-5 font-bold text-3xl">
-                                {" "}
-                                Bon Voyage
-                              </p>
-                              <p className="text-xs text-center mb-7">
-                                2023.02.07 ~ 2023.03.03
-                              </p>
-                              <p className="my-4 text-xs text-center ">
-                                프론트엔드 3명, 백엔드 4명 구성의 팀으로 진행한
-                                국내여행 스케줄러 구현 플래너 서비스 프로젝트입니다.
-                              </p>
-                              <p className="text-sm my-3 font-bold">기술 스택</p>
-                              <p className="text-xs text-gray-600 ">
-                                React.js, JavaScript, Redux Toolkit, Axios, Tailwind
-                                CSS
-                              </p>
-                              <p className="text-sm  my-3 font-bold">구현한 기능</p>
-                              <p className="text-xs text-gray-600">
-                                로그인,여행지검색, 카테고리, 카카오지도
-                                API,여행스케줄 생성,마이페이지
-                              </p>
-                            </motion.div>
-                          )}
-                        </div>
-                        <div className="flex justify-center items-center text-5xl gap-5 my-2">
-                          <button
-                            onClick={() =>
-                              window.open("https://youtu.be/ePmlGtwn984", "_blank")
-                            }
+                          </button></div>
+                </div>
+              </div>
+              <div className="flex justify-around mt-[2%]">
+              <div className="bg-pink-200 text-center w-[40%] p-2 rounded-xl">
+                  <h2 className="text-xl font-bold mb-1">Bon voyage</h2>
+                  <p className="text-sm"> 2023.01.11 ~ 2023.02.05</p>
+                  <p className="text-sm mt-1">  프론트엔드 3명, 백엔드 4명 구성의 팀으로 진행한
+                                요기요 딜리버리 구현 배달 서비스 프로젝트입니다.</p>
+                                <div className=" text-2xl flex justify-center gap-3 mt-2">
+                                <button
+                        
                           >
-                            <FaVideo className="text-black" />
+                            <FaVideo
+                              onClick={() =>
+                                window.open(
+                                  "https://youtu.be/ePmlGtwn984",
+                                  "_blank"
+                                )
+                              } className="text-black" />
                           </button>
                           <button>
                             {" "}
@@ -1953,57 +1855,19 @@ const isMobile = useMediaQuery({
                                   "_blank"
                                 )
                               }
+                            
                             />
-                          </button>
-                        </div>
-                      </div>
-
-                      <div className="mx-5">
-                        {" "}
-                        <button onClick={openHandler4}>
-                          <MdOutlineArrowDropDownCircle className="text-black" />
-                        </button>
-                        <div className="relative flex flex-col justify-center w-[16vw] 2xl:h-[30vh] xl:h-[30vh] md:h-[22vh] sm:h-[22vh] border-8 border-black">
-                          <div className="flex justify-center items-center ">
-                            <p className="px-[80px] text-black nowrap text-center font-bold text-xl">
-                              Schoolfitness
-                            </p>
-                          </div>
-                          <img
-                            className="mx-auto w-[20vw] h-[20vh] hover:scale-110 transition-transform ease-in-out duration-500"
-                            src="/images/fitrbg.png"
-                            alt="JUSTDOEAT"
-                          ></img>
-                          {modalVisible4 && (
-                            <motion.div className="bg-blue-100 overflow-hidden rounded-lg absolute top-[-15px] p-4 left-[-9px] 2xl:w-[17vw] xl:w-[17vw] md:w-[25vw] sm:w-[25vw] 2xl:h-[31vh] xl:h-[31vh] md:h-[23vh] sm:h-[23vh] opacity-100">
-                              <p className="text-center my-2 mt-5 font-bold text-3xl">
-                                Schoolfitness
-                              </p>
-                              <p className="text-xs text-center mb-7">
-                                2023.03.06 ~ 2023.04.04
-                              </p>
-                              <p className="my-4 text-xs text-center ">
-                                프론트엔드 5명, 백엔드 4명 구성의 팀으로 진행한
-                                고3학생 체력 단련 어플리케이션 구현 서비스 프로젝트입니다.
-                              </p>
-                              <p className="text-sm my-3 font-bold">기술 스택</p>
-                              <p className="text-xs text-gray-600 ">
-                                React.js, TypeScript, recoil, Axios, Tailwind CSS, styled components
-                              </p>
-                              <p className="text-sm  my-3 font-bold">구현한 기능</p>
-                              <p className="text-xs text-gray-600">
-                                메인페이지, 헬스리포트, 게임, 마이스탬프, 더보기
-                              </p>
-                            </motion.div>
-                          )}
-                        </div>
-                        <div className="flex justify-center items-center text-5xl gap-5 my-2">
-                          <button
+                          </button></div>
+                </div>
+                <div className="bg-pink-200 text-center w-[40%] p-2 rounded-xl">
+                  <h2 className="text-xl font-bold mb-1">Schoolfitness</h2>
+                  <p className="text-sm"> 2023.01.11 ~ 2023.02.05</p>
+                  <p className="text-sm mt-1">  프론트엔드 3명, 백엔드 4명 구성의 팀으로 진행한
+                                요기요 딜리버리 구현 배달 서비스 프로젝트입니다.</p>
+                                <div className=" text-2xl flex justify-center gap-3 mt-2">
+                                <button
                             onClick={() =>
-                              window.open(
-                                "https://www.youtube.com/watch?v=hLS2y7jnayA&t=35s",
-                                "_blank"
-                              )
+                              window.open("https://youtu.be/hLS2y7jnayA", "_blank")
                             }
                           >
                             <FaVideo className="text-black" />
@@ -2019,11 +1883,10 @@ const isMobile = useMediaQuery({
                                 )
                               }
                             />
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div></div></div>
+                          </button></div>
+                </div>
+              </div>
+            </div>
             )}
 
             <div></div>
