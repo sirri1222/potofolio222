@@ -1783,10 +1783,10 @@ const isMobile = useMediaQuery({
                         <button onClick={openHandler}>
                           <MdOutlineArrowDropDownCircle className="text-black" />
                         </button>
-                        <div className="relative flex flex-col justify-center w-[16vw] 2xl:h-[30vh] xl:h-[30vh] md:h-[22vh] sm:h-[22vh]  border-black border-8 border-black">
-                          <div className="flex justify-center items-center  ">
+                        <div className="relative flex flex-col justify-center w-[80%]   ">
+                       
                             {modalVisible && (
-                              <motion.div className="bg-blue-100 overflow-hidden rounded-lg 2xl:h-[31vh] xl:h-[31vh] md:h-[23vh] sm:h-[23vh] absolute top-[-15px] p-4 left-[-9px] 2xl:w-[17vw] xl:w-[17vw] md:w-[25vw] sm:w-[25vw] ">
+                              <motion.div className="bg-blue-100 rounded-lg h-[20vh] overflow-hidden  ">
                                 <p className="text-center my-2 mt-5 font-bold text-3xl">
                                   kyobo
                                 </p>
@@ -1797,30 +1797,10 @@ const isMobile = useMediaQuery({
                                   프론트엔드 3명, 백엔드 4명 구성의 팀으로 진행한
                                   요기요 딜리버리 구현 배달 서비스 프로젝트입니다.
                                 </p>
-                                <p className="text-sm my-3 font-bold">기술 스택</p>
-                                <p className="text-xs text-gray-600 ">
-                                  React.js, JavaScript, Redux Toolkit, Axios,
-                                  Tailwind CSS
-                                </p>
-                                <p className="text-sm  my-3 font-bold">
-                                  구현한 기능
-                                </p>
-                                <p className="text-xs text-gray-600">
-                                  메뉴, 카테고리
-                                </p>
+                              
+                              
                               </motion.div>
-                            )}
-                            <p className="px-[80px] nowrap text-center text-black font-bold text-xl">
-                              kyobo
-                            </p>
-                          </div>
-                          <img
-                            className="mx-auto w-[20vw] h-[20vh] hover:scale-110 transition-transform ease-in-out duration-500"
-                            src="/images/kyoborbg.png"
-                            alt="JUSTDOEAT"
-                          ></img>
-                        </div>
-                        <div className="flex justify-center items-center text-5xl gap-5 my-2">
+                            )} <div className="flex justify-center items-center text-3xl gap-5 my-2">
                           <button onClick={() => alert("동영상이 없습니다.")}>
                             <FaVideo className="text-black" />
                           </button>
@@ -1837,6 +1817,11 @@ const isMobile = useMediaQuery({
                             />
                           </button>
                         </div>
+                          
+                         
+                      
+                        </div>
+                       
                       </div>
 
                       <div className="mx-5">
